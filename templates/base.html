@@ -19,37 +19,26 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <!-- top navbar -->
-            <nav class="nav-extended text-shadow grey darken-4">
-                <div class="nav-wrapper">
-                    <a href="{{ url_for('index') }}" class="brand-logo">Cheese Heaven</a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('index') }}">Home</a></li>
-                        <li><a href="#">View Cheeses</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Log Out</a></li>
-                        <li><a href="#">Log In</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </nav>
+      <nav class="navbar">
         <!-- mobile sidenav -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align"></h4>Cheese & Wine</li>
+        <div class="brand-title">Cheese Heaven</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <!-- top navbar -->
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="#">View Cheeses</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Log Out</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Register</a></li>
-
-        </ul>
-    </header>
+          </ul>
+        </div>
+      </nav>
 
     {% block content %}
     {% endblock %}
