@@ -1,10 +1,12 @@
 /**** GOOGLE FONTS ****/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');
 
+/**** BASE ****/
 * {
     font-family: 'Satisfy', cursive, 'Lato', sans-serif;
 }
 
+/**** NAV BAR ****/
 .navbar {
     display: flex;
     position: relative;
@@ -42,5 +44,57 @@
 
 .navbar-links li:hover {
     background-color: #555;
+}
+
+/**** TOGGLE NAV ****/
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
 }
 
