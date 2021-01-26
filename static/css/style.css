@@ -1,33 +1,9 @@
 /**** GOOGLE FONTS ****/
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');
-
-/**** BASE ****/
-
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');body {
     font-family: 'Satisfy', cursive, 'Lato', sans-serif;
     box-sizing: border-box;
 }
 
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-
-/****  NAVIGATION BAR  ****/
-
-nav .brand-logo  {
-    color: #FFA000;
-    font-size: 2.5rem;
-    padding-left: 5rem;
-}
-
-nav ul a {
-    font-size: 1.5rem;
-    font-family: 'sans-serif';
-}
-nav ul a:hover{
-    color: #FFA000;
-}
 
 /****  INDEX HEADER  ****/
 
@@ -72,3 +48,4 @@ main {
   font-family: sans-serif;
   margin-top: 1.5rem;
 }
+
