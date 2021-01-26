@@ -1,74 +1,102 @@
 /**** GOOGLE FONTS ****/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');
 
-/**** BASE ****/
-
-body {
-    font-family: 'Satisfy', cursive, 'Lato', sans-serif;
+* {
     box-sizing: border-box;
 }
 
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+body {
+    margin: 0;
+    padding: 0;
 }
 
-
-/****  NAVIGATION BAR  ****/
-
-nav .brand-logo  {
-    color: #FFA000;
-    font-size: 2.5rem;
-    padding-left: 5rem;
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
 }
 
-nav ul a {
+.brand-title {
     font-size: 1.5rem;
-    font-family: 'sans-serif';
-}
-nav ul a:hover{
-    color: #FFA000;
+    margin: .5rem;
 }
 
-/****  INDEX HEADER  ****/
-
-#header {
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(https://pixabay.com/get/g74fdb12685429ec06de1ec0740755327188b90968ac7ed5043b420d59c274511bab3518a7a700f46cee66e7a569855ef_1920.jpg);
-  background-size: cover;
-  height: 100vh;
+.navbar-links {
+    height: 100%;
 }
 
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFA000;
-  text-align: center;
-}
-h1 {
-  margin: 0;
-  font-size: 4rem;
-  white-space: nowrap;
-}
-h2 {
-  font-size: 2.7rem;
-  color: white;
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-main {
-  max-width: 500px;
-  margin: 20px auto;
+.navbar-links li {
+    list-style: none;
 }
 
-.btn-large {
-  text-transform: none;
-  background-color: #FFA000;
-  font-size: 2rem;
-  font-family: sans-serif;
-  margin-top: 1.5rem;
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
 }
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
