@@ -1,51 +1,7 @@
 /**** GOOGLE FONTS ****/
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap');
+
+* {
     font-family: 'Satisfy', cursive, 'Lato', sans-serif;
-    box-sizing: border-box;
-}
-
-
-/****  INDEX HEADER  ****/
-
-#header {
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(https://pixabay.com/get/g74fdb12685429ec06de1ec0740755327188b90968ac7ed5043b420d59c274511bab3518a7a700f46cee66e7a569855ef_1920.jpg);
-  background-size: cover;
-  height: 100vh;
-}
-
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFA000;
-  text-align: center;
-}
-h1 {
-  margin: 0;
-  font-size: 4rem;
-  white-space: nowrap;
-}
-h2 {
-  font-size: 2.7rem;
-  color: white;
-}
-
-main {
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-.btn-large {
-  text-transform: none;
-  background-color: #FFA000;
-  font-size: 2rem;
-  font-family: sans-serif;
-  margin-top: 1.5rem;
 }
 
