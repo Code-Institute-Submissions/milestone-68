@@ -159,3 +159,19 @@ hr.style-eight:after {
     text-align: center!important;
     font-size: 3rem;
 }
+
+/**** CARD PANEL ****/
+.text{
+    font-size: 3rem;
+    font-family: 'Satisfy';
+    color: #FFA000;
+}
+
+.card-body {
+    background: linear-gradient(to right, #212121, #434343);
+}
+
+.py-4 {
+    padding-bottom: 0px!important;
+    padding-top: 0px!important;
+}
