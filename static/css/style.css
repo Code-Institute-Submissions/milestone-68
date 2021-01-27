@@ -4,6 +4,12 @@
 /**** BASE ****/
 * {
     font-family: 'Satisfy', cursive, 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #FFA000;
 }
 
 /**** NAV BAR ****/
@@ -65,6 +71,7 @@
     border-radius: 10px;
 }
 
+/**** MEDIA QUERIES FOR NAV ****/
 @media (max-width: 800px) {
     .navbar {
         flex-direction: column;
@@ -98,3 +105,27 @@
     }
 }
 
+/**** JUMBOTRON****/
+
+.jumbotron {
+    background-image: url('../img/hero-image.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px!important;
+}
+
+.display-4 {
+    padding-top: 8rem;
+}
+
+.lead {
+    font-size: 2rem;
+    color: #ffffff;
+} 
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #FFA000;
+    border-color: #ffffff;
+}
