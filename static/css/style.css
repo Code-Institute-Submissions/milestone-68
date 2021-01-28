@@ -155,12 +155,6 @@ hr.style-eight:after {
     background: white;
 }
 
-/**** ABOUT INDEX ****/
-.text-center {
-    text-align: center!important;
-    font-size: 3rem;
-}
-
 /**** CARD PANEL ****/
 .text{
     font-size: 3rem;
@@ -196,4 +190,45 @@ footer {
   color: #fff;
   background-color: #FFA000;
   text-align: center;
+}
+
+/**** REGISTER FORM ****/
+
+#bg_cover {
+    flex: 1;
+    display: flex;
+}
+
+#cover_caption {
+  width: 100vw;
+  margin: auto;
+}
+
+#register_form:before {
+	background-color: #FFA000;
+	border-radius: 10px;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.display-4{
+    color: #333;
+}
+
+.mt-2 {
+    font-size: 1.2rem;
+}
+
+.form-control {
+    font-size: 1.2rem;
+    font-family: 'Lato';
+}
+
+a {
+    color: #333;
 }
