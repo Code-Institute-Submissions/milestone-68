@@ -114,6 +114,7 @@ p {
 
 .jumbotron {
     background-image: url('../img/hero-image.jpg');
+    opacity: 0.9;
     height: 90vh;
     background-size: cover;
     background-position: center;
