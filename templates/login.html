@@ -7,10 +7,10 @@
         <!--Register form-->
         <div class="row text-white">
             <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                <h1 class="display-4 py-2 text-truncate">Register</h1>
+                <h1 class="display-4 py-2 text-truncate">Log In</h1>
                 <div class="px-2">
                     <form id="register_form" class="justify-content-center" method="POST"
-                        action="{{ url_for('register') }}">
+                        action="{{ url_for('login') }}">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email"
@@ -34,8 +34,7 @@
                                 placeholder="Where are you from?" required>
                             <small class="mt-2">The name of your country</small>
                         </div>
-                        <button class="btn btn-primary btn-lg shadow mt-3" value="login" type="submit">Sign
-                            in
+                        <button class="btn btn-primary btn-lg shadow mt-3" value="login" type="submit">Log In
                         </button>
                     </form>
                 </div>
@@ -43,7 +42,7 @@
                 <div class="row">
                     <div class="col s12">
                         <p class="mt-3">
-                            Account already created? <a href="{{ url_for('login') }}" class="btn-color">Log In</a>
+                            New here? <a href="{{ url_for('register') }}" class="btn-color">Register</a>
                         </p>
                     </div>
                 </div>

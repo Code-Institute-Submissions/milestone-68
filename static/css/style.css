@@ -121,7 +121,7 @@ p {
     border-radius: 0px!important;
 }
 
-.display-4 {
+.display-3 {
     padding-top: 8rem;
 }
 
@@ -231,4 +231,9 @@ footer {
 
 a {
     color: #333;
+}
+
+/**** FLASH MESSAGES ****/
+.mx-auto {
+    font-size: 1.5rem;
 }
