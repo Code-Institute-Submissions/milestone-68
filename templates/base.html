@@ -19,27 +19,49 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <!-- mobile sidenav -->
-        <div class="brand-title">Cheese Heaven</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <!-- top navbar -->
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="#">View Cheeses</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Log Out</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-            </ul>
+    <header>
+        <nav class="navbar">
+            <!-- mobile sidenav -->
+            <div class="brand-title">Cheese Heaven</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <!-- top navbar -->
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="#">View Cheeses</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row mx-auto message_container">
+            <div class="alert alert-warning mx-auto mt-5" role="alert">
+                {{message}}
+            </div>
         </div>
-    </nav>
-    
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
+    <!-- Main content -->
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
 
     {% block content %}
     {% endblock %}
@@ -48,24 +70,24 @@
     <footer class="page-footer">
         <div class="row footer-content">
             <div class="center-align">
-            <!-- Social links-->
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Like us on Facebook">
-                <i class="fab fa-facebook social-icon hoverable"></i>
-                <span class="sr-only">Facebook</span>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow us on Instagram">
-                <i class="fab fa-instagram social-icon hoverable"></i>
-                <span class="sr-only">Instagram</span>
-            </a>
-            <a href="http://www.youtube.com/" target="_blank" aria-label="Watch us on Youtube">
-                <i class="fab fa-youtube-square social-icon hoverable"></i>
-                <span class="sr-only">YouTube</span>
-            </a>
-            <a href="https://www.twitter.com/" target="_blank" aria-label="Follow us on Twitter">
-                <i class="fab fa-twitter social-icon hoverable"></i>
-                <span class="sr-only">Twitter</span>
-            </a>
-            <!--/ Social links-->
+                <!-- Social links-->
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Like us on Facebook">
+                    <i class="fab fa-facebook social-icon hoverable"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram social-icon hoverable"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="http://www.youtube.com/" target="_blank" aria-label="Watch us on Youtube">
+                    <i class="fab fa-youtube-square social-icon hoverable"></i>
+                    <span class="sr-only">YouTube</span>
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" aria-label="Follow us on Twitter">
+                    <i class="fab fa-twitter social-icon hoverable"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <!--/ Social links-->
             </div>
         </div>
     </footer>
