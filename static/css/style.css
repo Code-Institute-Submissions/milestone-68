@@ -237,3 +237,19 @@ a {
 .mx-auto {
     font-size: 1.5rem;
 }
+
+/**** MODALS ****/
+.modal-body {
+    font-family: Lato;
+    font-size: 1.1rem;
+}
+
+.modal-title{
+    color: #FFA000;
+}
+
+.btn-warning {
+    background-color: #FFA000;
+    border-color: #FFA000;
+}
+

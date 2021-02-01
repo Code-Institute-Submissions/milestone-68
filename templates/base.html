@@ -34,14 +34,33 @@
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="#">View Cheeses</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Log Out</a></li>
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('logout') }}" data-toggle="modal" data-target="#logout">Log Out</a></li>
+                    <li><a href="{{ url_for('login') }} ">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-
+    <!-- Modal "log out" -->
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title">Log Out?</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning text-white" data-dismiss="modal">Stay</button>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger"> Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
