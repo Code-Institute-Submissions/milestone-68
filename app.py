@@ -115,6 +115,12 @@ def get_cheeses():
     return render_template("cheeses.html", cheeses=cheeses)
 
 
+# ---------- ADD PAIRING ---------- #
+@app.route("/add_pairing")
+def add_pairing():
+    return render_template("add_pairing.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
