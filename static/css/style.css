@@ -282,3 +282,9 @@ label {
     padding-top: 1rem;
 }
 
+.pt-3 {
+    padding-top: 2rem;
+    border: solid;
+    margin-top: 2rem;
+}
+
