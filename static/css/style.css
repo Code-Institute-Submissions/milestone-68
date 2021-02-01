@@ -8,7 +8,7 @@
     padding: 0px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #FFA000;
 }
 
@@ -266,5 +266,19 @@ a {
     border-color: #ffffff;
     width: 15rem;
     margin-bottom: .7rem;
+}
+
+/**** ADD PAIRING FORM ****/
+label {
+    font-size: 1.4rem;
+}
+
+.cheese-title{
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.form-row>[class*=col-] {
+    padding-top: 1rem;
 }
 
