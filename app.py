@@ -107,6 +107,13 @@ def logout():
     return redirect(url_for("login"))
 
 
+# ---------- CHEESE PAGE ---------- #
+@app.route("/cheeses")
+def cheeses():
+
+    return render_template("cheeses.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
