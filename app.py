@@ -111,7 +111,7 @@ def logout():
 @app.route("/")
 @app.route("/get_cheeses")
 def get_cheeses():
-    cheeses = mongo.db.cheeses.find()
+    cheeses = list(mongo.db.cheeses.find())
     return render_template("cheeses.html", cheeses=cheeses)
 
 

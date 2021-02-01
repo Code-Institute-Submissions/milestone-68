@@ -253,3 +253,18 @@ a {
     border-color: #FFA000;
 }
 
+/**** CARDS ****/
+.card-title {
+    color: #FFA000;
+    padding-top: .6rem;
+    margin-bottom: 0;
+}
+
+.btn-primary-2 {
+    color: #ffffff;
+    background-color: #FFA000;
+    border-color: #ffffff;
+    width: 15rem;
+    margin-bottom: .7rem;
+}
+
