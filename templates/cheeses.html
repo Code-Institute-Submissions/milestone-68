@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+    {% for cheese in cheeses %}
+        {{cheese.category_name}}<br>
+        {{cheese.country_of_origin}}<br>
+    {% endfor %}
+
 
 
 {% endblock %}

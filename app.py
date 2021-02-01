@@ -23,8 +23,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route("/index")
 def index():
-    cheeses = mongo.db.cheeses.find()
-    return render_template("index.html", cheeses=cheeses)
+
+    return render_template("index.html")
 
 
 # ---------- REGISTER PAGE ---------- #
@@ -108,10 +108,11 @@ def logout():
 
 
 # ---------- CHEESE PAGE ---------- #
-@app.route("/cheeses")
-def cheeses():
-
-    return render_template("cheeses.html")
+@app.route("/")
+@app.route("/get_cheeses")
+def get_cheeses():
+    cheeses = mongo.db.cheeses.find()
+    return render_template("cheeses.html", cheeses=cheeses)
 
 
 if __name__ == "__main__":
