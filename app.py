@@ -116,9 +116,41 @@ def get_cheeses():
 
 
 # ---------- ADD PAIRING ---------- #
-@app.route("/add_pairing")
+@app.route("/add_pairing", methods=["GET", "POST"])
 def add_pairing():
+    if request.method == "POST":
+        # send form data to cheese collection
+
+        pairing = {
+            "cheese_name": request.form.get("cheese_name"),
+            "country_of_origin": request.form.get("country_of_origin"),
+            "made_from": request.form.get("made_from"),
+            "type": request.form.get("type"),
+            "flavour": request.form.get("flavour"),
+            "texture": request.form.get("texture"),
+            "description": request.form.get("description"),
+            "image": request.form.get("image"),
+            "wine_id": request.form.get("wine_id"),
+            "origin": request.form.get("origin"),
+            "sweetness": request.form.get("sweetness"),
+            "colour": request.form.get("colour"),
+            "wine_description": request.form.get("wine_description"),
+            "wine_image": request.form.get("wine_image"),
+            "created_by": session["user"],
+        }
+        mongo.db.cheeses.insert_one(pairing)
+        flash("Thanks for the pairing!")
+        return redirect(url_for("get_cheeses"))
+
     return render_template("add_pairing.html")
+
+
+# ---------- SINGLE CHEESE PAGE ---------- #
+@app.route('/')
+@app.route("/single_cheese")
+def single_cheese():
+
+    return render_template("single_cheese.html")
 
 
 if __name__ == "__main__":

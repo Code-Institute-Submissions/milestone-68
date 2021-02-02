@@ -9,7 +9,7 @@
         <hr class="style-eight-2">
         <h2 class="cheese-title">First add a Cheese</h2>
     </div>
-    <form method="POST" action="">
+    <form method="POST" action="{{ url_for('add_pairing') }}">
         <div class="form-row">
             <!-- Cheese name input -->
             <div class="form-group col-md-6">
@@ -123,6 +123,7 @@
                     placeholder="Picture hosted on a website">
             </div>
         </div>
+        <!-- Submit button  -->
         <div class="row">
             <div class="col s12 center align">
                 <button class="btn btn-primary btn-lg shadow mt-3" type="submit">Submit</button>
