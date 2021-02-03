@@ -146,11 +146,12 @@ def add_pairing():
 
 
 # ---------- SINGLE CHEESE PAGE ---------- #
-@app.route('/')
-@app.route("/single_cheese")
-def single_cheese():
+@app.route('/single_cheese/<cheeses_id>')
+def single_cheese(cheeses_id):
 
-    return render_template("single_cheese.html")
+    cheeses = mongo.db.cheeses.find_one({'_id': ObjectId(cheeses_id)})
+
+    return render_template("single_cheese.html", cheeses=cheeses)
 
 
 if __name__ == "__main__":
