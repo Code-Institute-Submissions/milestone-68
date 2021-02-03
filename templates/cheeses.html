@@ -5,7 +5,7 @@
     <div class="cheese-headline text-center">
         <h2>All Cheeses</h2>
         <!-- Breakline -->
-        <hr class="style-eight">
+        <hr class="style-eight-2">
     </div>
     <!-- Cheese Cards -->
     <div class="row">
@@ -13,14 +13,14 @@
         <div class="col-12 col-md-6 col-lg-4 mb-3">
             <div class="wrap">
                 <div class="card" style="display:inline-block">
-                    <img class="card-img-top" src="static/img/brie.jpg" alt="brie cheese">
+                    <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="brie">
                     <div class="cheese-card-body">
                         <div class="text-center">
                             <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
                             <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}</h4>
                             <p><em>by: {{ cheese.created_by }}</em></p>
                             <!-- below place the id in href -->
-                            <a href="{{url_for('single_cheese', cheeses_id=cheese._id)}}" class="btn btn-primary-2 rounded">View</a>
+                            <a href="{{url_for('single_cheese', cheeses_id=cheeses._id)}}" class="btn btn-primary-2 rounded">View</a>
                         </div>
                     </div>
                 </div>
@@ -28,5 +28,5 @@
         </div>
         {% endfor %}
     </div>
-
+</div>
  {% endblock %}

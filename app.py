@@ -129,7 +129,7 @@ def add_pairing():
             "flavour": request.form.get("flavour"),
             "texture": request.form.get("texture"),
             "description": request.form.get("description"),
-            "image": request.form.get("image"),
+            "cheese_image": request.form.get("cheese_image"),
             "wine_id": request.form.get("wine_id"),
             "origin": request.form.get("origin"),
             "sweetness": request.form.get("sweetness"),
