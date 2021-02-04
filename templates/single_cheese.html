@@ -4,22 +4,20 @@
 <div class="container">
     <section class="row align-items-center my-5">
         <div class="col-lg-7">
-            <h2 class="single-cheese-title">Brie</h2>
+            <h2 class="single-cheese-title">{{cheeses.cheese_name}}</h2>
             <hr>
             <img src="{{ cheeses.cheese_image }}" alt="brie" class="img-thumbnail">
         </div>
         <article class="col-lg-5">
             <ul class="cheese-description">
-                <li><i class="fas fa-flag"></i> Country of origin: France</li><br>
-                <li><i class="fas fa-flask"></i> Made from unpasteurized cow's milk.</li><br>
-                <li><i class="far fa-folder"></i> Type: soft, artisan, soft-ripened.</li><br>
-                <li><i class="fas fa-utensil-spoon"></i> Flavour: fruity, mild, nutty, tangy.</li><br>
-                <li><i class="fas fa-chart-pie"></i> Texture: buttery, runny and soft-ripened</li><br>
+                <li><i class="fas fa-flag"></i> {{cheeses.country_of_origin}}</li><br>
+                <li><i class="fas fa-flask"></i> {{cheeses.made_from}}</li><br>
+                <li><i class="far fa-folder"></i> {{cheeses.type}}</li><br>
+                <li><i class="fas fa-utensil-spoon"></i> {{cheeses.flavour}}</li><br>
+                <li><i class="fas fa-chart-pie"></i> {{cheeses.texture}}</li><br>
             </ul>
             <hr>
-            <p>Brie is the best known French cheese and has a nickname "The Queen of Cheeses". Brie is a soft cheese
-                named after the French region Brie, where it was originally created. Several hundred years ago, Brie was
-                one of the tributes which had to be paid to the French kings.</p>
+            <p>{{cheeses.description}}</p>
         </article>
     </section>
             <!-- Breakline -->
