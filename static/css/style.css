@@ -12,6 +12,10 @@ li {
     list-style-type:none ;
 }
 
+.img-thumbnail{
+    border: 2px solid #FFA000;
+}
+
 h1, h2, h3 {
     color: #FFA000;
 }
@@ -374,4 +378,5 @@ ul.description{
         font-size: 3rem;
     }
 }
+
 
