@@ -155,6 +155,14 @@ def single_cheese(cheeses_id):
     return render_template("single_cheese.html", cheeses=cheeses)
 
 
+# ---------- EDIT PAGE ---------- #
+@app.route("/edit_cheese/<cheeses_id>", methods=["GET", "POST"])
+def edit_cheese(cheeses_id):
+
+    cheeses = mongo.db.cheesess.find_one({"_id": ObjectId(cheeses_id)})
+    return render_template("edit_cheese.html", cheeses=cheeses)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
