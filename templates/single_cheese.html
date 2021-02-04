@@ -26,21 +26,18 @@
     <section class="row align-items-center my-5">
         <article class="col-lg-7">
             <ul class="description">
-                <li><i class="fas fa-globe-americas"></i> Regions: Argentina, Chile, Tuscany</li><br>
-                <li><i class="fas fa-flag"></i> origin: Cahors, France.</li><br>
-                <li><i class="fas fa-lemon"></i> Sweetness: Dry</li><br>
-                <li><i class="fas fa-tint"></i> colour: Deep purple</li><br>
+                <li><i class="fas fa-globe-americas"></i> {{cheeses.regions}}</li><br>
+                <li><i class="fas fa-flag"></i> {{cheeses.origin}}</li><br>
+                <li><i class="fas fa-lemon"></i> {{cheeses.sweetness}}</li><br>
+                <li><i class="fas fa-tint"></i> {{cheeses.colour}}</li><br>
             </ul>
             <hr>
-            <p>Originating in Cahors in the Bordeaux region of France, malbec (also known as côt) is now the iconic
-                grape and signature red wine of Argentina. Sometimes used for red wine blends, the grapes are also used
-                to make a luscious wine of the same name. Malbec wines exhibit flavors of juicy red and purple fruits,
-                and, similar to most other red wines, are slightly high in alcohol.</p>
+            <p>{{cheeses.wine_description}}</p>
         </article>
         <div class="col-lg-5">
-            <h2 class="single-title">Malbec</h2>
+            <h2 class="single-title">{{cheeses.wine_id}}</h2>
             <hr>
-            <img src="{{ cheeses.cheese_image }}" alt="brie" class="img-thumbnail">
+            <img src="{{ cheeses.wine_image }}" alt="wines" class="img-thumbnail">
         </div>
     </section>
 </div>

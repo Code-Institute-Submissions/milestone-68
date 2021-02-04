@@ -112,6 +112,7 @@ def logout():
 @app.route("/get_cheeses")
 def get_cheeses():
     cheeses = list(mongo.db.cheeses.find())
+
     return render_template("cheeses.html", cheeses=cheeses)
 
 
