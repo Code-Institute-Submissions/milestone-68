@@ -325,14 +325,14 @@ hr.style-eight-2:after {
 }
 
 /**** SINGLE CHEESE PAGE ****/
-.single-cheese-title {
+.single-title {
     color: #FFA000;
     font-family: lato;
     text-transform: uppercase;
     letter-spacing: .1rem;
 }
 
-ul.cheese-description{
+ul.description{
     font-size: 1.3rem;
 }
 

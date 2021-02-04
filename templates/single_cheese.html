@@ -4,12 +4,12 @@
 <div class="container">
     <section class="row align-items-center my-5">
         <div class="col-lg-7">
-            <h2 class="single-cheese-title">{{cheeses.cheese_name}}</h2>
+            <h2 class="single-title">{{cheeses.cheese_name}}</h2>
             <hr>
             <img src="{{ cheeses.cheese_image }}" alt="brie" class="img-thumbnail">
         </div>
         <article class="col-lg-5">
-            <ul class="cheese-description">
+            <ul class="description">
                 <li><i class="fas fa-flag"></i> {{cheeses.country_of_origin}}</li><br>
                 <li><i class="fas fa-flask"></i> {{cheeses.made_from}}</li><br>
                 <li><i class="far fa-folder"></i> {{cheeses.type}}</li><br>
@@ -20,8 +20,29 @@
             <p>{{cheeses.description}}</p>
         </article>
     </section>
-            <!-- Breakline -->
-        <hr class="style-eight">
+    <h1 class="text-center">Our Wine Suggestion</h1>
+    <!-- Breakline -->
+    <hr class="style-eight">
+    <section class="row align-items-center my-5">
+        <article class="col-lg-7">
+            <ul class="description">
+                <li><i class="fas fa-globe-americas"></i> Regions: Argentina, Chile, Tuscany</li><br>
+                <li><i class="fas fa-flag"></i> origin: Cahors, France.</li><br>
+                <li><i class="fas fa-lemon"></i> Sweetness: Dry</li><br>
+                <li><i class="fas fa-tint"></i> colour: Deep purple</li><br>
+            </ul>
+            <hr>
+            <p>Originating in Cahors in the Bordeaux region of France, malbec (also known as côt) is now the iconic
+                grape and signature red wine of Argentina. Sometimes used for red wine blends, the grapes are also used
+                to make a luscious wine of the same name. Malbec wines exhibit flavors of juicy red and purple fruits,
+                and, similar to most other red wines, are slightly high in alcohol.</p>
+        </article>
+        <div class="col-lg-5">
+            <h2 class="single-title">Malbec</h2>
+            <hr>
+            <img src="{{ cheeses.cheese_image }}" alt="brie" class="img-thumbnail">
+        </div>
+    </section>
 </div>
 
 
