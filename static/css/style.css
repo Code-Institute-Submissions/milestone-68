@@ -352,3 +352,26 @@ ul.cheese-description{
     font-family:Satisfy ;
 }
 
+/**** MEDIA QUERIES ****/
+@media only screen and (max-width: 768px) {
+    ul.cheese-description{
+    margin-top: 2rem;
+    font-size: 1.9rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    ul.cheese-description {
+    font-size: 1.5rem;
+  }
+    p {
+        font-size: 1.3rem;
+    }
+    .display-3 {
+        font-size: 3rem;
+    }
+}
+
