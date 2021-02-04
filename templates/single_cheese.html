@@ -11,7 +11,7 @@
         <article class="col-lg-5">
             <ul class="description">
                 <li><i class="fas fa-flag"></i> {{cheeses.country_of_origin}}</li><br>
-                <li><i class="fas fa-flask"></i> {{cheeses.made_from}}</li><br>
+                <!--<li><i class="fas fa-flask"></i> {{cheeses.made_from}}</li><br>-->
                 <li><i class="far fa-folder"></i> {{cheeses.type}}</li><br>
                 <li><i class="fas fa-utensil-spoon"></i> {{cheeses.flavour}}</li><br>
                 <li><i class="fas fa-chart-pie"></i> {{cheeses.texture}}</li><br>
@@ -24,20 +24,25 @@
     <!-- Breakline -->
     <hr class="style-eight">
     <section class="row align-items-center my-5">
-        <article class="col-lg-7">
+        <article class="col-lg-5">
             <ul class="description">
-                <li><i class="fas fa-globe-americas"></i> {{cheeses.regions}}</li><br>
                 <li><i class="fas fa-flag"></i> {{cheeses.origin}}</li><br>
+                <li><i class="fas fa-globe-americas"></i> {{cheeses.regions}}</li><br>
                 <li><i class="fas fa-lemon"></i> {{cheeses.sweetness}}</li><br>
                 <li><i class="fas fa-tint"></i> {{cheeses.colour}}</li><br>
             </ul>
             <hr>
             <p>{{cheeses.wine_description}}</p>
         </article>
-        <div class="col-lg-5">
+        <div class="col-lg-7">
             <h2 class="single-title">{{cheeses.wine_id}}</h2>
             <hr>
             <img src="{{ cheeses.wine_image }}" alt="wines" class="img-thumbnail">
+        </div>
+        <!-- Edit/delete buttons -->
+        <div class="pb-3 text-center">
+            <button type="button" class="btn btn-success btn-lg">Edit </button>
+            <button type="button" class="btn btn-danger btn-lg">Delete</button>
         </div>
     </section>
 </div>
