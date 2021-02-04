@@ -3,7 +3,7 @@
 <!-- Main container/Title -->
 <div class="container cheese-section min-vh-100 pt-3">
     <div class="cheese-headline text-center">
-        <h2>All Cheeses</h2>
+        <h1>All Cheeses</h1>
         <!-- Breakline -->
         <hr class="style-eight-2">
     </div>
@@ -18,7 +18,7 @@
                         <div class="text-center">
                             <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
                             <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}</h4>
-                            <p><em>by: {{ cheese.created_by }}</em></p>
+                            <p>by: {{ cheese.created_by }}</p>
                             <!-- below place the id in href -->
                             <a href="{{url_for('single_cheese', cheeses_id=cheeses._id)}}" class="btn btn-primary-2 rounded">View</a>
                         </div>
