@@ -156,11 +156,11 @@ def single_cheese(cheeses_id):
 
 
 # ---------- EDIT PAGE ---------- #
-@app.route("/edit_cheese/<cheeses_id>", methods=["GET", "POST"])
-def edit_cheese(cheeses_id):
+@app.route("/edit_pairing/<cheeses_id>", methods=["GET", "POST"])
+def edit_pairing(cheeses_id):
 
-    cheeses = mongo.db.cheesess.find_one({"_id": ObjectId(cheeses_id)})
-    return render_template("edit_cheese.html", cheeses=cheeses)
+    cheeses = mongo.db.cheeses.find_one({"_id": ObjectId(cheeses_id)})
+    return render_template("edit_pairing.html", cheeses=cheeses)
 
 
 if __name__ == "__main__":
