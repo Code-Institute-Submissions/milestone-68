@@ -158,6 +158,29 @@ def single_cheese(cheeses_id):
 # ---------- EDIT PAGE ---------- #
 @app.route("/edit_pairing/<cheeses_id>", methods=["GET", "POST"])
 def edit_pairing(cheeses_id):
+    if request.method == "POST":
+        # send form data to MongoDB and update fields
+
+        submit = {
+            "cheese_name": request.form.get("cheese_name"),
+            "country_of_origin": request.form.get("country_of_origin"),
+            "made_from": request.form.get("made_from"),
+            "type": request.form.get("type"),
+            "flavour": request.form.get("flavour"),
+            "texture": request.form.get("texture"),
+            "description": request.form.get("description"),
+            "cheese_image": request.form.get("cheese_image"),
+            "wine_id": request.form.get("wine_id"),
+            "origin": request.form.get("origin"),
+            "sweetness": request.form.get("sweetness"),
+            "colour": request.form.get("colour"),
+            "wine_description": request.form.get("wine_description"),
+            "wine_image": request.form.get("wine_image"),
+            "created_by": session["user"],
+        }
+
+        mongo.db.cheeses.update({"_id": ObjectId(cheeses_id)}, submit)
+        flash("Thanks for the updated pairing!")
 
     cheeses = mongo.db.cheeses.find_one({"_id": ObjectId(cheeses_id)})
     return render_template("edit_pairing.html", cheeses=cheeses)

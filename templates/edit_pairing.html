@@ -68,13 +68,13 @@
                     placeholder="Picture hosted on a website" value="{{ cheeses.cheese_image }}">
             </div>
         </div>
-    </form>
+        <!-- No need for this form below since it this all has to be inside one big form element
+        Basicaly form should go from line 12 until line 138, Roman -->
     <div class="cheese_headline text-center">
         <!-- Breakline -->
         <hr class="style-eight-2">
         <h2 class="cheese-title">Now add your Wine!</h2>
     </div>
-    <form method="POST" action="">
         <div class="form-row">
             <!-- Wine name input -->
             <div class="form-group col-md-6">
@@ -135,7 +135,7 @@
                     class="btn btn-danger btn-lg shadow-mt-3">Cancel</a>
             </div>
         </div>
-    </form>
+        </form>
 </section>
 
 {% endblock %}
