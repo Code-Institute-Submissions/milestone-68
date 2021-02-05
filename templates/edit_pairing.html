@@ -3,68 +3,69 @@
 
 <!-- Main section/title -->
 <section class="container cheese_section pt-3">
-    {% for cheese in cheeses %}
     <div class="cheese_headline text-center">
         <h2>Edit your Pairing</h2>
         <!-- Breakline -->
         <hr class="style-eight-2">
         <h2 class="cheese-title">First add a Cheese</h2>
     </div>
-    <form method="POST" action="{{ url_for('edit_pairing', cheeses_id=cheese._id) }}">
+    <form method="POST" action="{{ url_for('edit_pairing', cheeses_id=cheeses._id) }}">
         <div class="form-row">
             <!-- Cheese name input -->
             <div class="form-group col-md-6">
                 <i class="fas fa-cheese"></i>
                 <label for="cheese_name">Cheese title</label>
-                <input required type="text" class="form-control" id="cheese_name" name="cheese_name" maxlength="50">
+                <input required type="text" class="form-control" id="cheese_name" name="cheese_name" maxlength="50"
+                value="{{ cheeses.cheese_name }}">
             </div>
             <!-- Cheese origin -->
             <div class="form-group col-md-6">
                 <i class="fas fa-flag"></i>
                 <label for="country_of_origin">Country of origin</label>
                 <input required type="text" class="form-control" id="country_of_origin" name="country_of_origin"
-                    maxlength="50">
+                    maxlength="50" value="{{ cheeses.country_of_origin }}">
             </div>
             <!-- Cheese made from -->
             <div class="form-group col-md-6">
                 <i class="fas fa-flask"></i>
                 <label for="made_from">What is the cheese made from?</label>
                 <input required type="text" class="form-control" id="made_from" name="made_from" maxlength="50"
-                    placeholder="eg. cow or sheep milk">
+                    value="{{ cheeses.made_from }}" placeholder="eg. cow or sheep milk">
             </div>
             <!-- Cheese type -->
             <div class="form-group col-md-6">
                 <i class="far fa-folder"></i>
                 <label for="type">Type of cheese</label>
                 <input required type="text" class="form-control" id="type" name="type" maxlength="50"
-                    placeholder="eg. hard, artisan, soft-ripened">
+                    placeholder="eg. hard, artisan, soft-ripened" value="{{ cheeses.type }}">
             </div>
             <!-- Cheese flavour -->
             <div class="form-group col-md-6">
                 <i class="fas fa-utensil-spoon"></i>
                 <label for="flavour">Flavour of Cheese</label>
                 <input required type="text" class="form-control" id="flavour" name="flavour" maxlength="50"
-                    placeholder="eg. fruity, nutty, savory, sharp">
+                    placeholder="eg. fruity, nutty, savory, sharp" value="{{ cheeses.flavour }}">
             </div>
             <!-- Cheese texture -->
             <div class="form-group col-md-6">
                 <i class="fas fa-chart-pie"></i>
                 <label for="texture">Texture</label>
                 <input required type="text" class="form-control" id="texture" name="texture" maxlength="50"
-                    placeholder="eg. buttery, creamy, crumbly">
+                    placeholder="eg. buttery, creamy, crumbly" value="{{ cheeses.texture}}">
             </div>
             <!-- Cheese description -->
             <div class="form-group col-md-6">
                 <i class="fas fa-pen"></i>
                 <label for="description">Short description</label>
-                <input required type="text" class="form-control" id="description" name="description" maxlength="60">
+                <input required type="text" class="form-control" id="description" name="description" maxlength="150"
+                value="{{ cheeses.description }}">
             </div>
             <!-- Cheese image input  -->
             <div class="form-group col-md-6">
                 <i class="fas fa-camera"></i>
                 <label for="image">Image Url</label>
                 <input required type="text" class="form-control" id="image" name="image"
-                    placeholder="Picture hosted on a website">
+                    placeholder="Picture hosted on a website" value="{{ cheeses.cheese_image }}">
             </div>
         </div>
     </form>
@@ -79,56 +80,57 @@
             <div class="form-group col-md-6">
                 <i class="fas fa-wine-glass-alt"></i>
                 <label for="wine_id">Wine title</label>
-                <input required type="text" class="form-control" id="wine_id" name="wine_id" maxlength="50">
+                <input required type="text" class="form-control" id="wine_id" name="wine_id" maxlength="50"
+                value="{{ cheeses.wine_id }}">
             </div>
             <!-- Wine regions -->
             <div class="form-group col-md-6">
                 <i class="fas fa-globe-americas"></i>
                 <label for="regions">Wine regions</label>
                 <input required type="text" class="form-control" id="regions" name="regions" maxlength="50"
-                    placeholder="eg. Bordeaux, Chille">
+                    placeholder="eg. Bordeaux, Chille" value="{{ cheeses.regions }}">
             </div>
             <!-- Wine origin -->
             <div class="form-group col-md-6">
                 <i class="fas fa-flag"></i>
                 <label for="origin">Origin of Wine</label>
                 <input required type="text" class="form-control" id="origin" name="origin" maxlength="50"
-                    placeholder="eg. France, Spain">
+                    placeholder="eg. France, Spain" value="{{ cheeses.origin }}">
             </div>
             <!-- Wine sweetness -->
             <div class="form-group col-md-6">
                 <i class="fas fa-lemon"></i>
                 <label for="sweetness">Sweetness</label>
                 <input required type="text" class="form-control" id="sweetness" name="sweetness" maxlength="50"
-                    placeholder="eg. dry, semi-sweet">
+                    placeholder="eg. dry, semi-sweet" value="{{ cheeses.sweetness }}">
             </div>
             <!-- Wine colour -->
             <div class="form-group col-md-6">
                 <i class="fas fa-tint"></i>
                 <label for="colour">Wine Colour</label>
                 <input required type="text" class="form-control" id="colour" name="colour" maxlength="50"
-                    placeholder="eg. deep purple, pale salmon">
+                    placeholder="eg. deep purple, pale salmon" value="{{ cheeses.colour }}">
             </div>
             <!-- Wine description -->
             <div class="form-group col-md-6">
                 <i class="fas fa-pen"></i>
                 <label for="wine_description">Short description</label>
                 <input required type="text" class="form-control" id="wine_description" name="wine_description"
-                    maxlength=" 60">
+                    maxlength="150" value="{{ cheeses.wine_description }}">
             </div>
             <!-- Wine image input  -->
             <div class="form-group col-md-6">
                 <i class="fas fa-camera"></i>
                 <label for="wine_image">Image Url</label>
                 <input required type="text" class="form-control" id="wine_image" name="wine_image"
-                    placeholder="Picture hosted on a website">
+                    placeholder="Picture hosted on a website" value="{{ cheeses.wine_image }}">
             </div>
         </div>
         <!-- Submit button  -->
         <div class="row">
             <div class="col s12 center align">
                 <button class="btn btn-primary btn-lg shadow mt-3" type="submit">Edit Task</button>
-                {% endif %}
+                
             </div>
         </div>
     </form>
