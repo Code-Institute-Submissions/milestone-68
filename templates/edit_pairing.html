@@ -16,7 +16,7 @@
                 <i class="fas fa-cheese"></i>
                 <label for="cheese_name">Cheese title</label>
                 <input required type="text" class="form-control" id="cheese_name" name="cheese_name" maxlength="50"
-                value="{{ cheeses.cheese_name }}">
+                    value="{{ cheeses.cheese_name }}">
             </div>
             <!-- Cheese origin -->
             <div class="form-group col-md-6">
@@ -58,7 +58,7 @@
                 <i class="fas fa-pen"></i>
                 <label for="description">Short description</label>
                 <input required type="text" class="form-control" id="description" name="description" maxlength="150"
-                value="{{ cheeses.description }}">
+                    value="{{ cheeses.description }}">
             </div>
             <!-- Cheese image input  -->
             <div class="form-group col-md-6">
@@ -81,7 +81,7 @@
                 <i class="fas fa-wine-glass-alt"></i>
                 <label for="wine_id">Wine title</label>
                 <input required type="text" class="form-control" id="wine_id" name="wine_id" maxlength="50"
-                value="{{ cheeses.wine_id }}">
+                    value="{{ cheeses.wine_id }}">
             </div>
             <!-- Wine regions -->
             <div class="form-group col-md-6">
@@ -129,8 +129,10 @@
         <!-- Submit button  -->
         <div class="row">
             <div class="col s12 center align">
-                <button class="btn btn-primary btn-lg shadow mt-3" type="submit">Edit Task</button>
-                
+                <button class="btn btn-primary btn-lg shadow mt-3" type="submit">Save Changes</button>
+                <!-- Cancel button  -->
+                <a href="{{url_for('single_cheese', cheeses_id=cheeses._id)}}"
+                    class="btn btn-danger btn-lg shadow-mt-3">Cancel</a>
             </div>
         </div>
     </form>
