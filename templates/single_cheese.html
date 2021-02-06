@@ -41,8 +41,10 @@
         </div>
         <!-- Edit/delete buttons -->
         <div class="pb-3 text-center">
-            <a  href="{{ url_for('edit_pairing', cheeses_id=cheeses._id)}}" class="btn btn-success btn-lg">Edit</a>
-            <button type="button" class="btn btn-danger btn-lg">Delete</button>
+            {% if session.user|lower == cheeses.created_by|lower %}
+                <a  href="{{ url_for('edit_pairing', cheeses_id=cheeses._id)}}" class="btn btn-success btn-lg">Edit</a>
+                <button type="button" class="btn btn-danger btn-lg">Delete</button>
+            {% endif %}
         </div>
     </section>
 </div>
