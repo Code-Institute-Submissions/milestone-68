@@ -188,6 +188,14 @@ def edit_pairing(cheeses_id):
     return render_template("edit_pairing.html", cheeses=cheeses)
 
 
+# ---------- DELETE PAIRING ---------- #
+@app.route("/delete_pairing/<cheeses_id>")
+def delete_pairing(cheeses_id):
+    mongo.db.tasks.remove({"_id": ObjectId(cheeses_id)})
+    flash("Pairing Successfully Deleted")
+    return redirect(url_for("cheeses.html"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
