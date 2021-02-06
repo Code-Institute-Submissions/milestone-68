@@ -191,9 +191,10 @@ def edit_pairing(cheeses_id):
 # ---------- DELETE PAIRING ---------- #
 @app.route("/delete_pairing/<cheeses_id>")
 def delete_pairing(cheeses_id):
-    mongo.db.tasks.remove({"_id": ObjectId(cheeses_id)})
+
+    mongo.db.cheeses.remove({"_id": ObjectId(cheeses_id)})
     flash("Pairing Successfully Deleted")
-    return redirect(url_for("cheeses.html"))
+    return redirect(url_for("get_cheeses"))
 
 
 if __name__ == "__main__":

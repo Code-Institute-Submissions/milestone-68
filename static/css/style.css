@@ -332,6 +332,11 @@ hr.style-eight-2:after {
     vertical-align: baseline;
 }
 
+.btn-primary-2 {
+    margin-bottom: 0;
+    width: auto;
+}
+
 /**** SINGLE CHEESE PAGE ****/
 .single-title {
     color: #FFA000;
