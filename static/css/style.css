@@ -393,5 +393,9 @@ ul.description{
     background-color: #FFA000!important;
 }
 
+img {
+    border-radius: 50%;
+}
+
 
 
