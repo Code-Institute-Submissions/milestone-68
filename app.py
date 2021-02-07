@@ -197,6 +197,18 @@ def delete_pairing(cheeses_id):
     return redirect(url_for("get_cheeses"))
 
 
+# ======== DELETE PROFILE ======== #
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+
+    mongo.db.cheeses.remove({"created_by": username.lower()})
+    mongo.db.users.remove({"username": username.lower()})
+    flash("Profile deleted")
+    session.pop("user")
+
+    return redirect(url_for("register"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -15,11 +15,34 @@
                         Profile</button>
                 </div>
                 <div class="col-lg-6 bg-warning">
-                    <img class="profile_img mx-auto my-4 shadow" src="#" alt="user image">
+                    <img class="profile_img mx-auto my-4 shadow" src="#" alt="user image" 
+                    onerror="this.onerror=null;this.src='/static/img/default_img/user-default.jpg';">
                 </div>
             </div>
         </div>
     </header>
+</div>
+
+<!-- Modal "Delete Profile" -->
+<div class="modal fade" id="delete_profile" tabindex="-1" role="dialog" aria-labelledby="delete_profile"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete your profile?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your profile?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning text-white" data-dismiss="modal">Cancel</button>
+                <a href="{{ url_for('delete_profile', username=username)}}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 
