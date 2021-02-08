@@ -117,6 +117,14 @@ def get_cheeses():
     return render_template("cheeses.html", cheeses=cheeses)
 
 
+# ---------- SEARCH BOX IN CHEESES.HTML ---------- #
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    cheeses = list(mongo.db.cheeses.find({"$text": {"$search": query}}))
+    return render_template("cheeses.html", cheeses=cheeses)
+
+
 # ---------- ADD PAIRING ---------- #
 @app.route("/add_pairing", methods=["GET", "POST"])
 def add_pairing():
