@@ -21,7 +21,7 @@
                         <a href="{{ url_for('get_cheeses')}}" class="btn btn-danger text-white"><i
                                 class="fas fa-redo"></i></a>
                     </span>
-                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -32,7 +32,8 @@
         <div class="col-12 col-md-6 col-lg-4 mb-3">
             <div class="wrap">
                 <div class="card" style="display:inline-block">
-                    <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses">
+                    <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses"
+                        onerror="this.onerror=null;this.src='static/img/default_img/cheese-default.jpg';">
                     <div class="cheese-card-body">
                         <div class="text-center">
                             <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>

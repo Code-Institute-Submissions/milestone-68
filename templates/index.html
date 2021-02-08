@@ -79,7 +79,8 @@
                                 minlength="10" pattern=".+.com" placeholder="Email adress*" required />
                             <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary"
                                 placeholder="Write your query and click submit!*" required></textarea>
-                            <button form="contactForm" type="submit" id="submit" class="btn btn-dange-2">Submit!</button>
+                            <button form="contactForm" type="submit" id="submit"
+                                class="btn btn-dange-2">Submit!</button>
                         </form>
                     </div>
                 </div>
@@ -101,7 +102,8 @@
         <div class="col-12 col-md-6 col-lg-4 mb-3">
             <div class="wrap">
                 <div class="card" style="display:inline-block">
-                    <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses">
+                    <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses"
+                        onerror="this.onerror=null;this.src='static/img/default_img/cheese-default.jpg';">
                     <div class="cheese-card-body">
                         <div class="text-center">
                             <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
