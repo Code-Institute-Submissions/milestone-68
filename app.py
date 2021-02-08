@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route("/index")
 def index():
-    cheeses = list(mongo.db.cheeses.find())
+    cheeses = list(mongo.db.cheeses.find({"created_by": "admin"}).limit(3))
 
     return render_template("index.html", cheeses=cheeses)
 
@@ -92,6 +92,7 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+        # {"username.user_loc": session["user"]})["username.user_loc"]
 
     if session["user"]:
         return render_template("profile.html", username=username)
