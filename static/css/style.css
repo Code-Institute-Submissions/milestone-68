@@ -165,7 +165,7 @@ hr.style-eight:after {
 
 /**** CARD PANEL ****/
 .text{
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-family: 'Satisfy';
     color: #FFA000;
 }
@@ -190,7 +190,7 @@ footer {
 }
 
 .social-icon {
-  font-size: 2em;
+  font-size: 2rem;
   padding: .5rem;
   margin-left: 5px;
   margin-right: 5px;
