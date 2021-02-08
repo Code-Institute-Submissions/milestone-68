@@ -259,6 +259,7 @@ a {
 .btn-warning {
     background-color: #FFA000;
     border-color: #FFA000;
+    margin-left: .4rem;
 }
 
 /**** CARDS ****/
@@ -396,6 +397,17 @@ ul.description{
 img {
     border-radius: 50%;
 }
+
+/**** SEARCH BOX ****/
+.mt-4, .my-4 {
+    margin-bottom: 2rem;
+}
+
+h3, search-title {
+    margin-left: .8rem;
+}
+
+
 
 
 
