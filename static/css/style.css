@@ -338,6 +338,10 @@ hr.style-eight-2:after {
     width: auto;
 }
 
+.btn-danger {
+    margin-top: .5rem;
+}
+
 /**** SINGLE CHEESE PAGE ****/
 .single-title {
     color: #FFA000;
