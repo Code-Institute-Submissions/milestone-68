@@ -7,6 +7,23 @@
         <!-- Breakline -->
         <hr class="style-eight-2">
     </div>
+    <!-- Search box -->
+    <div class="row mt-4">
+        <h3>Search for a cheese by Country...</h3>
+        <div class="col-12 m8">
+            <form action="{{ url_for('search') }}" method="POST" class="align-item-center">
+                <div class="input-group">
+                    <input type="text" name="query" id="query" class="col-3" minlength="3" required>
+                    <label for="query"></label>
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning btn-color" type="submit"><i class="fa fa-search"></i></button>
+                        <a href="{{ url_for('get_cheeses')}}" class="btn btn-danger text-white"><i
+                                class="fas fa-redo"></i></a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- Cheese Cards -->
     <div class="row">
         {% for cheese in cheeses %}
@@ -18,9 +35,10 @@
                         <div class="text-center">
                             <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
                             <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}</h4>
-                            <p class= "admin">by: {{ cheese.created_by }}</p>
+                            <p class="admin">by: {{ cheese.created_by }}</p>
                             <!-- below place the id in href -->
-                            <a href="{{url_for('single_cheese', cheeses_id=cheese._id)}}" class="btn btn-primary-2 rounded">View</a>
+                            <a href="{{url_for('single_cheese', cheeses_id=cheese._id)}}"
+                                class="btn btn-primary-2 rounded">View</a>
                         </div>
                     </div>
                 </div>
@@ -29,4 +47,4 @@
         {% endfor %}
     </div>
 </div>
- {% endblock %}
+{% endblock %}
