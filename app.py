@@ -20,9 +20,13 @@ mongo = PyMongo(app)
 
 
 # ---------- INDEX PAGE ---------- #
+
+# index cheeses
 @app.route('/')
 @app.route("/index")
 def index():
+
+    # Fetch all cheese data from MongoDB cheeses collection, limit of 3.
     cheeses = list(mongo.db.cheeses.find({"created_by": "admin"}).limit(3))
 
     return render_template("index.html", cheeses=cheeses)
@@ -92,8 +96,7 @@ def profile(username):
     # grab the session user's username from db
     user = mongo.db.users.find_one({"username": username.lower()})
 
-    # print(username)
-
+    # Displays profile page with user informations to logged user.
     if session["user"]:
         return render_template("profile.html", user=user)
 
@@ -101,6 +104,8 @@ def profile(username):
 
 
 # ---------- LOGOUT ---------- #
+
+# Allows registered user to log out from account
 @app.route("/logout")
 def logout():
 
@@ -114,6 +119,7 @@ def logout():
 @app.route("/")
 @app.route("/get_cheeses")
 def get_cheeses():
+    # Get all cheeses from database displayed on several pages.
     cheeses = list(mongo.db.cheeses.find())
 
     return render_template("cheeses.html", cheeses=cheeses)
@@ -122,6 +128,8 @@ def get_cheeses():
 # ---------- SEARCH BOX IN CHEESES.HTML ---------- #
 @app.route("/search", methods=["GET", "POST"])
 def search():
+
+    # Allows the user to search by country on cheeses.html template
     query = request.form.get("query")
     cheeses = list(mongo.db.cheeses.find({"$text": {"$search": query}}))
     return render_template("cheeses.html", cheeses=cheeses)
@@ -208,12 +216,17 @@ def delete_pairing(cheeses_id):
     return redirect(url_for("get_cheeses"))
 
 
-# ======== DELETE PROFILE ======== #
+# ---------- DELETE PEOFILE ---------- #
+
+# Allows user to delete account when in session.
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
 
+    # Deletes user from database.
     mongo.db.cheeses.remove({"created_by": username.lower()})
     mongo.db.users.remove({"username": username.lower()})
+
+    # Sends visual confirmation.
     flash("Profile deleted")
     session.pop("user")
 
