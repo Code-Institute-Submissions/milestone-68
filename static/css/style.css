@@ -340,6 +340,9 @@ hr.style-eight-2:after {
 
 .btn-danger-2 {
     margin-top: .5rem;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /**** SINGLE CHEESE PAGE ****/
