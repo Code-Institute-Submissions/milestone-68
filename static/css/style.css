@@ -338,6 +338,13 @@ hr.style-eight-2:after {
     width: auto;
 }
 
+.btn-primary-3 {
+    color: #ffffff;
+    background-color: #FFA000;
+    border-color: #ffffff;
+    margin-bottom: 1.2rem;
+}
+
 .btn-danger-2 {
     margin-top: .5rem;
     color: #fff;

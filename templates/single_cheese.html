@@ -4,6 +4,7 @@
 <div class="container">
     <section class="row align-items-center my-5">
         <div class="col-lg-7">
+            <a class="btn btn-primary-3 btn-lg" href="{{ url_for('get_cheeses') }}" role="button">Back to Cheeses</a>
             <h2 class="single-title">{{cheeses.cheese_name}}</h2>
             <hr>
             <img src="{{ cheeses.cheese_image }}" alt="brie" class="img-thumbnail">
