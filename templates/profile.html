@@ -36,9 +36,8 @@
                     Are you sure you want to delete your profile?
                 </div>
                 <div class="modal-footer">
-                    {{user.username}}
                     <button type="button" class="btn btn-warning text-white" data-dismiss="modal">Cancel</button>
-                    <a href="{{ url_for('delete_profile', username=username)}}" class="btn btn-danger">Delete</a>
+                    <a href="{{ url_for('delete_profile', username=user.username)}}" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>

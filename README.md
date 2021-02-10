@@ -99,15 +99,8 @@ Once the user has registered an account, they then have the ability to upload th
 
 Footer is visible on any page and icons themselves are clickable and lead to social links.
 
-## The Skeleton Plane
 
-### Wireframes
 
-* For wireframing I used the tool [Balsamiq](https://balsamiq.com/)
-
-### Database Design
-
-### Security
 
 
 
