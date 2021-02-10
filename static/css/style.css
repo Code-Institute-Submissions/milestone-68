@@ -107,6 +107,7 @@ p {
 
     .navbar-links ul li {
         text-align: center;
+        font-size: 1.4rem;
     }
 
     .navbar-links ul li a {
@@ -382,17 +383,20 @@ ul.description{
 
 /**** MEDIA QUERIES ****/
 @media only screen and (max-width: 768px) {
-    ul.cheese-description{
+    ul.description {
     margin-top: 2rem;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     }
     p {
         font-size: 1.5rem;
     }
+    .pb-3, .py-3 {
+    margin-top: 1.3rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
-    ul.cheese-description {
+    ul.description {
     font-size: 1.5rem;
   }
     p {
