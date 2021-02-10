@@ -2,20 +2,46 @@
 (function(){emailjs.init("user_qI0f2g6tNqj3cj8yeKtiz");})();
 
 
+
 // --- Sends e-mail to my e-mail adress
-function sendMail(contactForm) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
     emailjs.send("service_mncxtev", "contact", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
         "contact_request": contactForm.projectsummary.value
     })
-    .then(
-        function(response) {
-            console.log("SUCCESS", response);
-        },
-        function(error) {
-            console.log("FAILED", error);
-        }
-    );
-    return false;  // To block from loading a new page
+        .then(
+            function success() {
+                notification();
+                setTimeout(refresh, 2500);
+            },
+            function failure() {
+                failToSend();
+            }
+        );
+    return false;
+});
+
+// --- Changes text in button to notify user that e-mail was sent successfuly (200) ---
+function notification() {
+    $("#submit").text("E-mail submitted! Closing...");
+    $("#submit").removeClass("btn-danger");
+    $("#submit").addClass("btn-success");
+    setTimeout(function () { $("#contactModal").modal("toggle"); }, 2000);
+}
+
+// --- Refreshes form ONLY ---
+function refresh() {
+    $("#submit").text("Submit");
+    $("#submit").removeClass("btn-success");
+    $("#submit").addClass("btn-danger");
+    document.getElementById("contactForm").reset();
+}
+
+// --- E-mail failed to sent (404) ---
+function failToSend(){
+    $("#submit").text("Failed to submit. Refresh page");
+     $("#submit").removeClass("btn-warning");
+    $("#submit").addClass("btn-secondary");
 }
