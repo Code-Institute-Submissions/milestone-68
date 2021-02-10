@@ -20,6 +20,7 @@ The live website can be found [here]()
     * [Wireframes](#Wireframes)
     * [Database Design](#Database-Design)
     * [Security](#Security)
+  * [The Surface Plane](#The-Surface-Plane)
 * [Features](#Features)
    * [Existing Features](#Existing-Features)
    * [Future Features](#Features-Left-to-Implement)
@@ -42,7 +43,7 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 ## The Strategy Plane
 
-## User stories
+## User stories <hr>
 
 ### Guest User
 
@@ -72,7 +73,7 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 * As a registered user, I want the ability to see all the published pairings on the site.
 
-## The Scope Plane
+## The Scope Plane <hr>
 
 ### Features planned:
 
@@ -98,6 +99,85 @@ If user wants to contact the site owners directly, there is a email contact form
 Once the user has registered an account, they then have the ability to upload there own pairings to the site, while also being able to edit and delete them at any time. They can also browse through other cheeses if they are trying to find one from a specific country for a match. If there is no cheese from that country, they will be promted to try another. They also have the ability to delete there profile at any time. <br>
 
 Footer is visible on any page and icons themselves are clickable and lead to social links.
+
+## The Skeleton Plane <hr>
+
+### Wireframes
+Home: <br>
+![homepage-wireframe](static/img/readme/wireframes/homepage.png)
+
+
+### Database Design
+
+MongoDB Object format examples:
+
+Collection: users
+<br>{
+
+    _id: unique-value,
+    username: "admin"
+    password : "12a6y98767dn",
+    user_loc: "ireland"
+}
+
+Collection: cheeses
+<br>{
+
+    _id: unique-value,
+    cheese_name: "brie"
+    country_of_origin: "France"
+    type: "Soft, Artisan, Soft-ripened"
+    flavour: "fruity, mild, nutty, tangy"
+    texture: "Buttery, runny and soft-ripened"
+    description: "Brie is the best known..."
+    cheese_image: "https://i.imgur.com/MD23KTQ.jpg"
+    wine_id: "Malbec"
+    origin: "Cahors, France."
+    regions: "Argentina, Chile, Tuscany"
+    sweetness: "Dry"
+    colour: "Deep Purple"
+    wine_description: "Originating in Cahors ..."
+    wine_image: "https://i.imgur.com/NvHZLGy.jpg"
+    created_by: "session[user]"
+}
+
+### Security
+
+Database connection details are set up in an [env.py](#https://pypi.org/project/env.py/) for development, for security reasons this is not uploaded to GitHub so that database and connection details are not visible to users. In production these are stored in Heroku.
+
+## The Surface Plane <hr>
+
+## Design Choices
+
+### Fonts
+
+* The font used for titles, logo and throughout the majority of the site is 'Satisfy' by [Goggle Fonts](#https://fonts.google.com/). I used this to create a playful and sophisticated look. In other areas for better readability I used 'Lato', as I feel they compliment each other well.
+
+### Icons and Images
+
+* All icons used on this website are taken from [Font Awesome](#https://fontawesome.com/)
+* The Favicon used for this website is from [Favicon.io.](#https://favicon.io/)
+* All Images used throughout the website are from [Pixabay](#https://pixabay.com/)
+
+### Frameworks
+
+* Bootstrap 4 to build the front-end. I really liked the layout of the [Small Business Template](#https://startbootstrap.com/template/small-business) on Bootstrap and used this for my inspiration of my index page.
+* Micro framework [Flask](#https://flask.palletsprojects.com/en/1.1.x/), to build the backend.
+
+### Colours
+
+I wanted to use a fairly neutral colour scheme by sticking to black, grey, white and with a hint of colour by adding a orange colour to make certain elements and text stand out. I wanted to create a envoiment where a user can see what it wants straight away. 
+
+* Colours used throughout the web-site: 
+ - Navigation bar/footer: #333333
+ - Pop of orange: #FFA000
+ - Container colour: #EBEAEA
+
+ # Features
+
+
+
+
 
 
 
