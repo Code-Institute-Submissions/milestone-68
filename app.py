@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -144,7 +144,6 @@ def add_pairing():
         pairing = {
             "cheese_name": request.form.get("cheese_name"),
             "country_of_origin": request.form.get("country_of_origin"),
-            "made_from": request.form.get("made_from"),
             "type": request.form.get("type"),
             "flavour": request.form.get("flavour"),
             "texture": request.form.get("texture"),
@@ -184,7 +183,6 @@ def edit_pairing(cheeses_id):
         submit = {
             "cheese_name": request.form.get("cheese_name"),
             "country_of_origin": request.form.get("country_of_origin"),
-            "made_from": request.form.get("made_from"),
             "type": request.form.get("type"),
             "flavour": request.form.get("flavour"),
             "texture": request.form.get("texture"),

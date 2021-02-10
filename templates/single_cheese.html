@@ -12,7 +12,6 @@
         <article class="col-lg-5">
             <ul class="description">
                 <li><i class="fas fa-flag"></i> {{cheeses.country_of_origin}}</li><br>
-                <li><i class="fas fa-flask"></i> {{cheeses.made_from}}</li><br>
                 <li><i class="far fa-folder"></i> {{cheeses.type}}</li><br>
                 <li><i class="fas fa-utensil-spoon"></i> {{cheeses.flavour}}</li><br>
                 <li><i class="fas fa-chart-pie"></i> {{cheeses.texture}}</li><br>
@@ -42,11 +41,11 @@
         </div>
         <!-- Edit/delete buttons -->
         <div class="pb-3 text-center">
-            <!--{% if session.user|lower == cheeses.created_by|lower %}-->
+            {% if session.user|lower == cheeses.created_by|lower %}
             <a href="{{ url_for('edit_pairing', cheeses_id=cheeses._id)}}" class="btn btn-success btn-lg">Edit</a>
             <button type="button" class="btn btn-danger btn-lg" data-toggle="modal"
                 data-target="#delete_pairing">Delete</button>
-            <!--{% endif %}-->
+            {% endif %}
         </div>
         <!-- Modal "Delete Pairing" -->
         <div class="modal fade" id="delete_pairing" tabindex="-1" role="dialog" aria-labelledby="delete_pairing" aria-hidden="true">
