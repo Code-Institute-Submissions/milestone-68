@@ -203,8 +203,23 @@ def edit_pairing(cheeses_id):
         mongo.db.cheeses.update({"_id": ObjectId(cheeses_id)}, submit)
         flash("Thanks for the updated pairing!")
 
+        return redirect(url_for("single_cheese", cheeses_id=cheeses_id))
+
     cheeses = mongo.db.cheeses.find_one({"_id": ObjectId(cheeses_id)})
-    return render_template("edit_pairing.html", cheeses=cheeses)
+
+    # check if user in session is the author of the previous entries
+    if "user" in session.keys():
+        user = session["user"].lower()
+
+        if user == session["user"].lower():
+            return render_template(
+                "edit_pairing.html", cheeses=cheeses)
+
+        else:
+            return redirect(url_for("index"))
+
+    else:
+        return redirect(url_for("login"))
 
 
 # ---------- DELETE PAIRING ---------- #
