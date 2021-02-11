@@ -59,11 +59,11 @@
                     placeholder="Picture hosted on a website">
             </div>
         </div>
-    <div class="cheese_headline text-center">
-        <!-- Breakline -->
-        <hr class="style-eight-2">
-        <h2 class="cheese-title">Now add your Wine!</h2>
-    </div>
+        <div class="cheese_headline text-center">
+            <!-- Breakline -->
+            <hr class="style-eight-2">
+            <h2 class="cheese-title">Now add your Wine!</h2>
+        </div>
         <div class="form-row">
             <!-- Wine name input -->
             <div class="form-group col-md-6">
@@ -104,14 +104,15 @@
                 <i class="fas fa-pen"></i>
                 <label for="wine_description">Short description</label>
                 <input required type="text" class="form-control" id="wine_description" name="wine_description"
-                    maxlength=" 60">
+                    maxlength="500">
             </div>
             <!-- Wine image input  -->
             <div class="form-group col-md-6">
                 <i class="fas fa-camera"></i>
                 <label for="wine_image">Image Url</label>
                 <input required type="text" class="form-control" id="wine_image" name="wine_image"
-                    placeholder="Picture hosted on a website">
+                    placeholder="Picture hosted on a website"
+                    onerror="this.onerror=null;this.src='static/img/default_img/wine-default1-default.jpg';">
             </div>
         </div>
         <!-- Submit button  -->
@@ -120,7 +121,7 @@
                 <button class="btn btn-primary btn-lg shadow mt-3" type="submit">Submit</button>
             </div>
         </div>
-        </form>
+    </form>
 </section>
 
 {% endblock %}

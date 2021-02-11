@@ -61,11 +61,11 @@
                     placeholder="Picture hosted on a website" value="{{ cheeses.cheese_image }}">
             </div>
         </div>
-    <div class="cheese_headline text-center">
-        <!-- Breakline -->
-        <hr class="style-eight-2">
-        <h2 class="cheese-title">Now add your Wine!</h2>
-    </div>
+        <div class="cheese_headline text-center">
+            <!-- Breakline -->
+            <hr class="style-eight-2">
+            <h2 class="cheese-title">Now add your Wine!</h2>
+        </div>
         <div class="form-row">
             <!-- Wine name input -->
             <div class="form-group col-md-6">
@@ -107,14 +107,15 @@
                 <i class="fas fa-pen"></i>
                 <label for="wine_description">Short description</label>
                 <input required type="text" class="form-control" id="wine_description" name="wine_description"
-                    maxlength="150" value="{{ cheeses.wine_description }}">
+                    maxlength="500" value="{{ cheeses.wine_description }}">
             </div>
             <!-- Wine image input  -->
             <div class="form-group col-md-6">
                 <i class="fas fa-camera"></i>
                 <label for="wine_image">Image Url</label>
                 <input required type="text" class="form-control" id="wine_image" name="wine_image"
-                    placeholder="Picture hosted on a website" value="{{ cheeses.wine_image }}">
+                    placeholder="Picture hosted on a website" value="{{ cheeses.wine_image }}"
+                    onerror="this.onerror=null;this.src='static/img/default_img/wine-default1-default.jpg';">
             </div>
         </div>
         <!-- Submit button  -->
@@ -126,7 +127,7 @@
                     class="btn btn-danger btn-lg shadow-mt-3">Cancel</a>
             </div>
         </div>
-        </form>
+    </form>
 </section>
 
 {% endblock %}
