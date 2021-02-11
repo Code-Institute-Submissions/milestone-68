@@ -38,6 +38,12 @@ p {
 .brand-title {
     font-size: 1.5rem;
     margin: .5rem;
+    color: #ffffff;
+}
+
+.brand-title:hover {
+    Text-Decoration: None !important; 
+    color: #FFA000;
 }
 
 .navbar-links {

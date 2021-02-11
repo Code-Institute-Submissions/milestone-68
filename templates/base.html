@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese and Wine {{ title }}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap" rel="stylesheet">
@@ -17,15 +18,14 @@
     <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     {% block styles %}
     {% endblock %}
-    <title>Cheese and Wine</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <!-- mobile sidenav -->
-            <div class="brand-title">Cheese Heaven</div>
-            <a href="#" class="toggle-button">
+            <a href="{{ url_for('index') }}" class="brand-title">Cheese Heaven</a>
+            <a href="{{ url_for('index') }}" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>

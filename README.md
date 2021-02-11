@@ -6,7 +6,7 @@ Cheese & Wine is a helpful guide to show you pairings on which cheeses and wines
 
 ![homepage](static/img/readme/hero.png)
 
-The live website can be found [here]()
+The live website can be found [here](https://flask-cheese.herokuapp.com/)
 
 ## Table of Contents
 
@@ -197,6 +197,8 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey and wh
 ![popular](static/img/readme/popular.png)
   * This feature is to showcase some of the most popular cheeses on the website. Pairings created in the database by the admin only. (3 only as I didnt want to overcrowd the page).
   * The cheeses are displayed on responsive cards with a hover effect (not available on mobile). The effect is taken from [ordinarycoders](#https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.).
+
+
 
 
  
