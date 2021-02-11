@@ -73,6 +73,10 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 * As a registered user, I want the ability to see all the published pairings on the site.
 
+### Admin
+
+* As an admin, I want the ability to edit or delete all users pairings on the website and delete if necessary.
+
 ## The Scope Plane <hr>
 
 ### Features planned:
@@ -158,6 +162,7 @@ Database connection details are set up in an [env.py](#https://pypi.org/project/
 * All icons used on this website are taken from [Font Awesome](#https://fontawesome.com/)
 * The Favicon used for this website is from [Favicon.io.](#https://favicon.io/)
 * All Images used throughout the website are from [Pixabay](#https://pixabay.com/)
+* I used the image hosting site [Imgur](#https://imgur.com/) to store my images.
 
 ### Frameworks
 
@@ -169,11 +174,32 @@ Database connection details are set up in an [env.py](#https://pypi.org/project/
 I wanted to use a fairly neutral colour scheme by sticking to black, grey, white and with a hint of colour by adding a orange colour to make certain elements and text stand out. I wanted to create a envoiment where a user can see what it wants straight away. 
 
 * Colours used throughout the web-site: 
- - Navigation bar/footer: #333333
- - Pop of orange: #FFA000
- - Container colour: #EBEAEA
+  * Navigation bar/footer: - ![#333333](https://via.placeholder.com/15/333333/000000?text=+)
+  * Pop of orange: - ![#FFA000](https://via.placeholder.com/15/FFA000/000000?text=+)
+  * Container colour: - ![#EBEAEA](https://via.placeholder.com/15/EBEAEA/000000?text=+) 
 
  # Features
+
+ ## Existing Features
+
+* Navigation bar
+  * Navigation bar is visible on all pages and on all sizes, and completely responsive. The Navigation Bar displays the logo of the website and the options "Home", "View Cheeses", "Log In" and "Register" when the user is not logged in.
+
+* Welcome section & carousel
+  * This feature is a pretty straight forward, It explaines the guide and has a button option to view the pairings.
+  * I added a Bootstrap carousel that display images on demand or automatically for a visually more engaging user experience.
+
+* Contact Us <br>
+![Contact](static/img/readme/contact.png)
+  * Contact modal form with EmailJS functionality to contact site owner. Button turns green and reads "E-mail submitted! Closing..." or if failure to send gives a 404 message of "Failed to submit. Refresh page"
+
+* Popular Cheeses <br>
+![popular](static/img/readme/popular.png)
+  * This feature is to showcase some of the most popular cheeses on the website. Pairings created in the database by the admin only. (3 only as I didnt want to over crowd the page).
+  * The cheeses are displayed on responsive cards with a hover effect (not available on mobile). The effect is taken from [ordinarycoders](#https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.).
+
+
+ 
 
 
 
