@@ -15,7 +15,8 @@
                         Profile</button>
                 </div>
                 <div class="col-lg-6 bg-warning">
-                    <img class="profile_img mx-auto my-4 shadow" src="/static/img/default_img/user.jpg" alt="user image">
+                    <img class="profile_img mx-auto my-4 shadow" src="/static/img/default_img/user.jpg"
+                        alt="user image">
                 </div>
             </div>
         </div>
@@ -47,6 +48,35 @@
         <h2>Submit a Pairing</h2>
         <hr>
         <a class="btn btn-primary btn-lg shadow mt-3" href="{{ url_for('add_pairing')}}"> Create New</a>
+    </div>
+    <!--Users Pairings -->
+    <div class="row">
+        <div class="col-md-10 mb-5">
+            <h2>Your Pairings</h2>
+            <hr>
+            <div class="row">
+                {% for cheese in cheeses %}
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="wrap">
+                    <div class="card" style="display:inline-block">
+                        <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses"
+                            onerror="this.onerror=null;this.src='static/img/default_img/cheese-default.jpg';">
+                        <div class="cheese-card-body">
+                            <div class="text-center">
+                                <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
+                                <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}</h4>
+                                <p class="admin">by: {{ cheese.created_by }}</p>
+                                <!-- below place the id in href -->
+                                <a href="{{url_for('single_cheese', cheeses_id=cheeses._id)}}"
+                                    class="btn btn-primary-2 rounded">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
