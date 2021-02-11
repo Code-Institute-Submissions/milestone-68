@@ -57,22 +57,23 @@
             <div class="row">
                 {% for cheese in cheeses %}
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                <div class="wrap">
-                    <div class="card" style="display:inline-block">
-                        <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses"
-                            onerror="this.onerror=null;this.src='static/img/default_img/cheese-default.jpg';">
-                        <div class="cheese-card-body">
-                            <div class="text-center">
-                                <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
-                                <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}</h4>
-                                <p class="admin">by: {{ cheese.created_by }}</p>
-                                <!-- below place the id in href -->
-                                <a href="{{url_for('single_cheese', cheeses_id=cheeses._id)}}"
-                                    class="btn btn-primary-2 rounded">View</a>
+                    <div class="wrap">
+                        <div class="card" style="display:inline-block">
+                            <img class="card-img-top" src="{{ cheese.cheese_image }}" alt="cheeses"
+                                onerror="this.onerror=null;this.src='static/img/default_img/cheese-default.jpg';">
+                            <div class="cheese-card-body">
+                                <div class="text-center">
+                                    <h3 class="cheese card-title">{{cheese.cheese_name}}</h3>
+                                    <h4 class="card-text"><i class="far fa-compass"></i> {{cheese.country_of_origin}}
+                                    </h4>
+                                    <p class="admin">by: {{ cheese.created_by }}</p>
+                                    <!-- below place the id in href -->
+                                    <a href="{{url_for('single_cheese', cheeses_id=cheese._id)}}"
+                                        class="btn btn-primary-2 rounded">View</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 {% endfor %}
             </div>

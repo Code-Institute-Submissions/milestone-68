@@ -97,10 +97,14 @@ def profile(username):
     user = mongo.db.users.find_one({"username": username.lower()})
 
     # Displays profile page with user informations to logged user.
-    if session["user"]:
-        return render_template("profile.html", user=user)
+    if "user" in session.keys():
+        if session["user"] == "admin":
+            cheeses = list(mongo.db.cheeses.find())
+        else:
+            cheeses = list(
+                mongo.db.cheeses.find({"created_by": username.lower()}))
 
-    return redirect(url_for("login"))
+    return render_template("profile.html", user=user, cheeses=cheeses)
 
 
 # ---------- LOGOUT ---------- #
