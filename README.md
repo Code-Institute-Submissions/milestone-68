@@ -1,8 +1,8 @@
 # Data Centric Development Project - Code Institute
 
-# Cheese & Wine
+# "Cheese & Wine"
 
-Cheese & Wine is a helpful guide to show you pairings on which cheese and wines pair well together, you can create amazing wine and cheese pairings on your own, and share them with others! So that the next time you’re on a wine and cheese mission, you’ll have no doubt what to choose!
+Cheese & Wine is a helpful guide to show you pairings on which cheeses and wines pair well together, you can create amazing wine and cheese pairings on your own, and share them with others, so that the next time you’re on a wine and cheese mission, you’ll have no doubt what to choose!
 
 ![homepage](static/img/readme/hero.png)
 
@@ -35,7 +35,7 @@ The live website can be found [here]()
 
 Welcome to my Data Centric Milestone Project for Code Institute.<br>
 
-The Goal of my project is to build a guide for cheese and wine lovers, who aren't sure where to start with choosing a wine for a cheese or vice versa. I wanted the site to be easy to navigate through, by having both the cheese and wine pairing on the same page. <br>
+The goal of my project is to build a guide for cheese and wine lovers, who aren't sure where to start with choosing a wine for a cheese or vice versa. I wanted the site to be easy to navigate, by having both the cheese and wine pairings on the same page. <br>
 
 Any guest of the site can view the pairings, only a registered user can upload,edit and delete there own pairings.
 
@@ -51,7 +51,7 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 * As a guest user, I want to be able to access this website from different devices easily.
 
-* As a guest user, I want to easily navigate the site so that I can find content quickly with ease.
+* As a guest user, I want to easily navigate the site so that I can find content quickly and with ease.
 
 * As a guest user, I want to be able to contact the site owner with any further questions I may have.
 
@@ -65,42 +65,42 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 * As a registered user, I want to be able to create and add cheese and wine pairings to the website.
 
-* As a registered user, I want the ability to edit my pairings on the website.
+* As a registered user, I want the option to edit my pairings on the website.
 
-* As a registered user, I want the ability to delete my pairing if I want to.
+* As a registered user, I want the option to delete my pairing if I wish to.
 
 * As a registered user, I want to be able to delete my profile.
 
-* As a registered user, I want the ability to see all the published pairings on the site.
+* As a registered user, I want the option to see all the published pairings on the site.
 
 ### Admin
 
-* As an admin, I want the ability to edit or delete all users pairings on the website and delete if necessary.
+* As an admin, I want the ability to edit or delete all user pairings on the website and delete if necessary.
 
 ## The Scope Plane <hr>
 
 ### Features planned:
 
 * Responsive design.
-* Navigation Menu, clear to navigate through.
+* Navigation Menu.
 * Search bar.
-* Website title and about section with more information.
+* Carousel and About section with more information.
 * MongoDB databases to store pairings and user login/profile information.
-* Seperate cards for each individual pairing.
+* Separate cards for each individual pairing.
 * Login functionality.
 * Logout functionality.
 * Profile Page
-* User's ability to submit there own pairings.
+* User's ability to submit their own pairings.
 
-*  In designing this site, I wanted the user to have a positive experience and for the web-site to be simple to use. User can easily navigate through website to view each pairing, and use the search function to find a cheese by country.
+*  In designing this site, I wanted the user to have a positive experience and for the website to be simple to use. Users can easily navigate through the website to view each pairing, and also use the search function to find a cheese by country.
 
 ## The Structure Plane
 
-When the user arrives on site, it will see main hero image, text and immidiate button to register to the site. Navigation is always on top of the screen and the main cheese and wine logo acts as a link to Home page. Below the main hero image I have used a carousel for a diverse range of pictures, with a about section, to explain to the user exactly what the site entails. <br>
+When the user arrives on site, he/she will see main hero image, text and immediate button to register to the site. Navigation is always on top of the screen and the main cheese and wine logo acts as a link to the home page. Below the main hero image I have used a carousel for a diverse range of pictures, with an About section, to explain to the user exactly what the site entails. <br>
 
-If user wants to contact the site owners directly, there is a email contact form set up. The user will then recieve confirmation if the email has been sent or if there is a error. The most popular cheeses are located directly underneth, with a limit of 3 as to not overcrowd the page. If the user clicks on the "View Cheeses" option they will then be re-located to all of the cheeses, showing where they are from and who uploaded to the site.<br>
+If the user wishes to contact the site owners directly, there is an email contact form set up. The user will then receive confirmation if the email has been sent or if there is an error. The most popular cheeses are located directly underneath, with a limit of three in order to not overcrowd the page. If the user clicks on the "View Cheeses" option they will then be re-located to all of the cheeses, showing where they are from and who uploaded them to the site.<br>
 
-Once the user has registered an account, they then have the ability to upload there own pairings to the site, while also being able to edit and delete them at any time. They can also browse through other cheeses if they are trying to find one from a specific country for a match. If there is no cheese from that country, they will be promted to try another. They also have the ability to delete there profile at any time. <br>
+Once the user has registered an account, they then have the ability to upload their own pairings to the site, while also being able to edit and delete them at any time. They can also browse through other cheeses if they are trying to find one from a specific country for a match. If there is no cheese from that country, they will be prompted to try another. They also have the option to delete their profile at any time. <br>
 
 Footer is visible on any page and icons themselves are clickable and lead to social links.
 
@@ -155,7 +155,7 @@ Database connection details are set up in an [env.py](#https://pypi.org/project/
 
 ### Fonts
 
-* The font used for titles, logo and throughout the majority of the site is 'Satisfy' by [Goggle Fonts](#https://fonts.google.com/). I used this to create a playful and sophisticated look. In other areas for better readability I used 'Lato', as I feel they compliment each other well.
+* The font used for titles, logo and throughout the majority of the site is 'Satisfy' by [Google Fonts](#https://fonts.google.com/). I used this to create a playful and sophisticated look. In other areas for better readability I used 'Lato', as I feel they compliment each other well.
 
 ### Icons and Images
 
@@ -166,12 +166,12 @@ Database connection details are set up in an [env.py](#https://pypi.org/project/
 
 ### Frameworks
 
-* Bootstrap 4 to build the front-end. I really liked the layout of the [Small Business Template](#https://startbootstrap.com/template/small-business) on Bootstrap and used this for my inspiration of my index page.
+* Bootstrap 4 to build the front-end. I really liked the layout of the [Small Business Template](#https://startbootstrap.com/template/small-business) on Bootstrap and used this as my inspiration for my index page.
 * Micro framework [Flask](#https://flask.palletsprojects.com/en/1.1.x/), to build the backend.
 
 ### Colours
 
-I wanted to use a fairly neutral colour scheme by sticking to black, grey, white and with a hint of colour by adding a orange colour to make certain elements and text stand out. I wanted to create a envoiment where a user can see what it wants straight away. 
+I wanted to use a fairly neutral colour scheme by sticking to black, grey and white, with a hint of colour by adding a orange to make certain elements and text stand out. I wanted to create an environment where a user is directed where it wants straight away.
 
 * Colours used throughout the web-site: 
   * Navigation bar/footer: - ![#333333](https://via.placeholder.com/15/333333/000000?text=+)
@@ -182,11 +182,11 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey, white
 
  ## Existing Features
 
-* Navigation bar
+* Navigation Bar
   * Navigation bar is visible on all pages and on all sizes, and completely responsive. The Navigation Bar displays the logo of the website and the options "Home", "View Cheeses", "Log In" and "Register" when the user is not logged in.
 
-* Welcome section & carousel
-  * This feature is a pretty straight forward, It explaines the guide and has a button option to view the pairings.
+* Welcome Section & Carousel
+  * This feature is pretty straightforward. It explains the guide and has a button option to view the pairings.
   * I added a Bootstrap carousel that display images on demand or automatically for a visually more engaging user experience.
 
 * Contact Us <br>
@@ -195,7 +195,7 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey, white
 
 * Popular Cheeses <br>
 ![popular](static/img/readme/popular.png)
-  * This feature is to showcase some of the most popular cheeses on the website. Pairings created in the database by the admin only. (3 only as I didnt want to over crowd the page).
+  * This feature is to showcase some of the most popular cheeses on the website. Pairings created in the database by the admin only. (3 only as I didnt want to overcrowd the page).
   * The cheeses are displayed on responsive cards with a hover effect (not available on mobile). The effect is taken from [ordinarycoders](#https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.).
 
 
