@@ -292,6 +292,137 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey and wh
 * I want to add a comment section under each pairings individual page with a score system.
 * I want to also add a time stamp, so each user can check when each pairing has been previously updated.
 
+# Technologies
+
+* HTML5 & CCS3: Essential languages used to build a websites foundations.
+  * https://en.wikipedia.org/wiki/HTML5
+  * https://en.wikipedia.org/wiki/CSS
+
+* Bootstrap: An easy to use, responsive framework. Bootstrap was used to allow easy implementation of the overall responsivness and modals. Bootstrap's grid system was also used for simplicity and efficiency.
+  * https://getbootstrap.com/
+
+* Font Awesome: A vast and free library of responsive icons. This library was used throughout the site.
+  * https://fontawesome.com/
+
+* JavaScript and jQuery: These technologies were essential for the functioning of Email.js in order for user to contact me.
+  * https://jquery.com/
+
+* EmailJS: Service that helps sending emails using client side technologies only. It only requires to connect EmailJS to one of the supported email services, create an email template, and use their Javascript library to trigger an email. This was used for contact modal so that user's can get in contact with me.
+  * https://www.emailjs.com/
+
+* Python: Python is an interpreted, high-level, general-purpose programming language. In this project it was used to manage the back end development of the project.
+  * https://www.python.org/
+
+* Flask: Lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
+  * https://palletsprojects.com/p/flask/
+
+* MongoDB: NoSQL document-oriented database program that uses JSON like documents with schema used by the site to store collections.
+  * https://www.mongodb.com/
+
+* Github: Provides hosting for software development version control using Git and is used to store this projects repository.
+  * https://github.com/
+
+* Heroku: Cloud platform as a service supporting several programming languages and is used to deploy this project
+  * https://dashboard.heroku.com/apps
+
+# Testing
+
+## Testing section is located here
+
+## Validating code
+
+HTML
+  * code was validated through [W3 validator](#https://validator.w3.org/)
+
+CSS
+  * code was validated through W3 [Jigsaw](#https://jigsaw.w3.org/css-validator/)
+
+JavaScript
+  * code was validated through [JS Hint](#https://jshint.com/)
+
+Python
+  * code  was validated through [PEP8](#http://pep8online.com/)
+
+# Deployment
+
+## Project Creation
+
+To create this project I used the CI Gitpod Full Template by navigating [here](#https://github.com/Code-Institute-Org/gitpod-full-template) and clicking the 'Use this template' button.
+
+I was then directed to the create new repository from template page and entered in my desired repo name, then clicked Create repository from template button.
+
+Once created, I navigated to my new repository on GitHub and clicked the Gitpod button which built my workspace.
+
+The following commands were used for version control throughout the project:
+
+* git add <i>filename</i> - This command was used to add files to the staging area before committing.
+
+* git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
+
+* git push - This command is used to push all committed changes to the GitHub repository.
+
+## Deployment to Heroku
+### Create application:
+
+* Navigate to Heroku.com and login.
+* Click on the new button.
+* Select create new app.
+* Enter the app name.
+* Select region.
+
+### Set up connection to Github Repository:
+
+* Click the deploy tab and select GitHub - Connect to GitHub.
+* A prompt to find a github repository to connect to will then be displayed.
+* Enter the repository name for the project and click search.
+* Once the repo has been found, click the connect button.
+
+### Set environment variables:
+
+Click the settings tab and then click the Reveal Config Vars button and add the following:
+
+* key: IP, value: 0.0.0.0
+* key: PORT, value: 5000
+* key: MONGO_DBNAME, value: (database name you want to connect to)
+* key: MONGO_URI, value: (mongo uri - This can be found in MongoDB by going to clusters > connect > connect to your application and substituting the password and dbname that you set up in the link).
+* key: SECRET_KEY, value: (This is a custom secret key set up for configuration to keep client-side sessions secure).
+
+### Enable automatic deployment:
+
+* Click the Deploy tab
+* In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+### Run Locally
+
+* Navigate to the GitHub Repository.
+* Click the Code drop down menu.
+* Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
+* Open your developement editor of choice and open a terminal window in a directory of your choice.
+* Use the 'git clone' command in terminal followed by the copied git URL.
+* A clone of the project will be created locally on your machine.
+
+# Credits
+
+* Images taken from [Pixabay](#https://pixabay.com/)
+* Information on different pairings taken from the following websites -
+  * https://www.matchingfoodandwine.com/news/pairings/wine-and-cheese-pairings-for-beginners/
+  * https://www.cheese.com/
+  * https://vinepair.com/wine-blog/an-illustrated-guide-to-pairing-wine-and-cheese/
+  * https://www.winemag.com/2015/03/26/wine-and-cheese/
+* Breakline was taken from [CSS tricks](#https://css-tricks.com/examples/hrs/)
+* Hover effect for cheese cards was found [here](#https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.)
+* Videos from [Code Institute](#https://codeinstitute.net/)
+
+## Acknowledgements
+* My tutor Roman at the Kerry ETB for all the support he gives daily.
+* I'd like to thank my mentor Spencer Barriball for his patience and guidance throughout my project.
+* All at Code Institute and Tutor support.
+
+
+
+
+
+
 
 
 
