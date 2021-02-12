@@ -109,6 +109,19 @@ Footer is visible on any page and icons themselves are clickable and lead to soc
 ### Wireframes
 Home: <br>
 ![homepage-wireframe](static/img/readme/wireframes/homepage.png)
+View cheeses: <br>
+![view-cheeses](static/img/readme/wireframes/view-cheese.png)
+Pairings: <br>
+![pairings](static/img/readme/wireframes/single.png)
+Register <br>
+![register](static/img/readme/wireframes/register.png)
+Log In: <br>
+![login](static/img/readme/wireframes/Login.png)
+Profile: <br>
+![profile](static/img/readme/wireframes/profile.png)
+
+<hr>
+
 
 
 ### Database Design
