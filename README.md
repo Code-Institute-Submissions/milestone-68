@@ -94,7 +94,7 @@ Any guest of the site can view the pairings, only a registered user can upload,e
 
 *  In designing this site, I wanted the user to have a positive experience and for the website to be simple to use. Users can easily navigate through the website to view each pairing, and also use the search function to find a cheese by country.
 
-## The Structure Plane
+## The Structure Plane  <hr>
 
 When the user arrives on site, he/she will see main hero image, text and immediate button to register to the site. Navigation is always on top of the screen and the main cheese and wine logo acts as a link to the home page. Below the main hero image I have used a carousel for a diverse range of pictures, with an About section, to explain to the user exactly what the site entails. <br>
 
@@ -197,6 +197,94 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey and wh
 ![popular](static/img/readme/popular.png)
   * This feature is to showcase some of the most popular cheeses on the website. Pairings created in the database by the admin only. (3 only as I didnt want to overcrowd the page).
   * The cheeses are displayed on responsive cards with a hover effect (not available on mobile). The effect is taken from [ordinarycoders](#https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.).
+
+* Search box <br>
+![search](static/img/readme/search.png)
+  * This feature allows the user to search for a cheese based on its origin in the cheeses.html.
+  * When no results match the search, the text "No Result Found" is displayed.
+
+* Individual Pairing Page
+   * This page allows the user to view a custom pairing page:
+   * Cheese title
+   * Country of origin
+   * Type of cheese
+   * Flavour of Cheese
+   * Texture
+   * Description
+   * Cheese image
+   * Wine title
+   * Wine regions
+   * Origin of Wine
+   * Sweetness level
+   * Wine Colour
+   * Description
+   * Wine Image
+
+* Register<br>
+
+  The registration form takes the following information of the user to create an account:
+  * Email address
+  * Username
+  * Password
+  * Location
+
+  The passwords are hashed and protected using the import "generate_password_hash, check_password_hash" from werkzeug security.
+
+* Log In
+
+  * When a user is already registered, they may use the log in form to access their account. The user needs their password and username to log in.
+
+* Profile
+
+  * Once a user has registered they will be directed to their profile page, which showcases their information.
+  * The section "Your Pairings" displays the pairings submitted by the user. The user can also create a pairing by clicking on a specified button above the cheese cards.
+  * Each cheese card has 3 buttons : View, Edit, Delete.
+
+* Delete Profile <br>
+![delete](static/img/readme/delete.png)
+
+  * The user can delete their profile by clicking on the red "Delete" button in the dedicated profile card.
+  * This feature allows the user to permanently delete their profile.
+  * When the button is clicked a modal will ask for confirmation to avoid any mistakes.
+  * If the confirmation button is clicked, the profile is permanently deleted and the now guest user will be redirected to the registration page with an a flash message above.
+
+* Add Pairing
+
+  * This feature allows the user to submit a custom pairing through a form which includes descriptions of the cheeses and wines.
+  * After clicking on the submit button, the user can see the new pairing on the view cheeses page topped with a validation flash message. The pairing will then appear in the user's profile.
+  * This feature is accessible through the navigation bar and the user's profile.
+
+* Edit Pairing
+
+  * The user can edit the choosen pairing only when logged in.
+  * To submit new information, the user needs to click on the "Save Changes" button at the bottom of the page.
+  * After clicking on the "save changes" button, the user can see the updated pairing page topped with a validation flash message. The pairing will be updated in the user's profile.
+  * The user can delete the choosen pairing only when logged in.
+  * When the delete button is clicked, a modal asks confirmation to prevent the user from accidentally deleting the pairing.
+  * If confirmed, the pairing is deleted forever.
+
+* Log out
+
+ * The user can access this functionnality through the navigation bar.
+ * When clicked, a modal appears and ask for confirmation.
+ * If confirmed, the user is then flashed with a alert confirming that the user is logged out.
+
+* Social Icons
+
+  * In the footer there are four social icons with links, all links direct the user to social platforms.
+
+## Future Features
+
+* "like" functionality, so the user can like certain pairings to remember them for next time.
+* I want to add a comment section under each pairings individual page with a score system.
+* I want to also add a time stamp, so each user can check when each pairing has been previously updated.
+
+
+
+
+
+
+
 
 
 
