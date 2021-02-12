@@ -26,7 +26,14 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
 
-    # Fetch all cheese data from MongoDB cheeses collection, limit of 3.
+    """
+        Display cheese cards in index page.(limit of 3)
+
+        Fetch all cheese data from MongoDB cocktails collection.
+
+        Returns:
+        template: index.html.
+    """
     cheeses = list(mongo.db.cheeses.find({"created_by": "admin"}).limit(3))
 
     return render_template("index.html", cheeses=cheeses)
@@ -35,6 +42,17 @@ def index():
 # ---------- REGISTER PAGE ---------- #
 @app.route("/register", methods=["GET", "POST"])
 def register():
+
+    """
+        Displays register page to guest user and allows to create an account.
+
+        Prevents duplication of username by checking users
+        collection field "username".
+        Stores informations from website form to MongoDB.
+
+        Returns:
+        template: redirect to profile.html if registration successful.
+    """
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -64,6 +82,19 @@ def register():
 # ---------- LOGIN PAGE ---------- #
 @app.route("/login", methods=["GET", "POST"])
 def login():
+
+    """
+        Displays log in page and allows user to log into account.
+
+        Checks if the username exists in MongoDB users collection.
+        Protect password confidentiality.
+        Informs user if registration is successful or not through
+        flash messages.
+
+        Returns:
+        template: profile.html if the registration is successful.
+        template: login.html if registration unsuccessful.
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -93,7 +124,16 @@ def login():
 # ---------- PROFILE PAGE ---------- #
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    """
+        Displays profile page with user informations to logged user.
+
+        Fetch all user informations from MongoDB users collection.
+        Checks previously submitted pairings from user.
+        Grants access to all pairing data to admin.
+
+        Returns:
+        template: profile.html.
+    """
     user = mongo.db.users.find_one({"username": username.lower()})
 
     # Displays profile page with user informations to logged user.
@@ -132,8 +172,12 @@ def get_cheeses():
 # ---------- SEARCH BOX IN CHEESES.HTML ---------- #
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+       Allows the user to search for cheeses by country.
 
-    # Allows the user to search by country on cheeses.html template
+       Returns:
+       template: cheeses.html with filtered results
+    """
     query = request.form.get("query")
     cheeses = list(mongo.db.cheeses.find({"$text": {"$search": query}}))
     return render_template("cheeses.html", cheeses=cheeses)
@@ -142,6 +186,17 @@ def search():
 # ---------- ADD PAIRING ---------- #
 @app.route("/add_pairing", methods=["GET", "POST"])
 def add_pairing():
+
+    """
+        Allows registered user to submit a pairing to the website through
+        a form.
+
+        Allows all form fields to be sent to the MongoDB cheese collection.
+        Inserts a new entry in the pairings collection.
+
+        Returns:
+        template: add_pairing.html and redirected to main cheese page.
+    """
     if request.method == "POST":
         # send form data to cheese collection
 
@@ -172,7 +227,13 @@ def add_pairing():
 # ---------- SINGLE CHEESE PAGE ---------- #
 @app.route('/single_cheese/<cheeses_id>')
 def single_cheese(cheeses_id):
+    """
+        Grabs all data from mongoDB for cheese and
+        wines from cheese collection.
 
+        Returns:
+        template: single_cheese.html with results
+    """
     cheeses = mongo.db.cheeses.find_one({'_id': ObjectId(cheeses_id)})
 
     return render_template("single_cheese.html", cheeses=cheeses)
@@ -182,8 +243,21 @@ def single_cheese(cheeses_id):
 @app.route("/edit_pairing/<cheeses_id>", methods=["GET", "POST"])
 def edit_pairing(cheeses_id):
     if request.method == "POST":
-        # send form data to MongoDB and update fields
+        """
+            Allows the user to edit their submitted pairings through a form.
+            Checks for pairing ID field in MongoDB to fetch all data.
 
+            Displays all previously submitted data of the pairing by the user.
+            Checks if the user in session is the author of the entry.
+
+            Returns:
+            template: edit_pairing.html before changes if the
+            user is in session.
+            template: index.html if the user is logged in but not the author.
+            template: login.html if user not logged in.
+        """
+
+        # send form data to MongoDB and update fields
         submit = {
             "cheese_name": request.form.get("cheese_name"),
             "country_of_origin": request.form.get("country_of_origin"),
@@ -227,6 +301,14 @@ def edit_pairing(cheeses_id):
 # ---------- DELETE PAIRING ---------- #
 @app.route("/delete_pairing/<cheeses_id>")
 def delete_pairing(cheeses_id):
+    """
+        Allows user to delete pairings.
+
+        Deletes pairing from database.
+
+        Returns:
+        template: redirects to cheeses.html
+    """
 
     mongo.db.cheeses.remove({"_id": ObjectId(cheeses_id)})
     flash("Pairing Successfully Deleted")
@@ -234,12 +316,19 @@ def delete_pairing(cheeses_id):
 
 
 # ---------- DELETE PEOFILE ---------- #
-
-# Allows user to delete account when in session.
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
+    """
+        Allows user to delete account when in session.
 
-    # Deletes user from database.
+        Deletes user from database.
+        Sends visual confirmation.
+        Removes from session.
+
+        Returns:
+        template: redirects to register
+    """
+
     mongo.db.cheeses.remove({"created_by": username.lower()})
     mongo.db.users.remove({"username": username.lower()})
 
