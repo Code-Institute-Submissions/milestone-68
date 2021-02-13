@@ -347,7 +347,7 @@ Python
 
 * I had a issue with uploading my images to my project and the data base. They would always disapear after a couple of hours. I fixed this by using a hosting site [Imgur](#https://imgur.com/) which I uploaded my images to.
 
-* During development my forms for adding and editing a pairing wouldnt not have the information being passed through, I realised I had put two seperate forms for the cheese and wine. I resolved this by putting them in the same form.
+* During development my forms for adding and editing a pairing were having issues, the information was not being passed through. I realised I had put two seperate forms for the cheese and wine. I resolved this by putting them in the same form.
 
 * My footer on the profile page refused to stick to the bottom. I tried to fix it with the fixed-footer Bootstrap class. It sticked to the bottom but then covered any content at the bottom of the page. I resolved it by removing the bottom of 0 and gave the wrapping section of the page a minimum width of 100vh.
 
