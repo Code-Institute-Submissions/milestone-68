@@ -5,10 +5,11 @@
 <section class="container cheese_section pt-3">
     <div class="cheese_headline text-center">
         <h2>Edit your Pairing</h2>
-        <!-- Breakline -->
+        <!-- Breakline (taken from https://css-tricks.com/examples/hrs/)-->
         <hr class="style-eight-2">
         <h2 class="cheese-title">First add a Cheese</h2>
     </div>
+    <!-- Form -->
     <form method="POST" action="{{ url_for('edit_pairing', cheeses_id=cheeses._id) }}">
         <div class="form-row">
             <!-- Cheese name input -->

@@ -151,7 +151,7 @@ p {
     border-color: #ffffff;
 }
 
-/**** BREAK LINE ****/
+/**** BREAK LINE (taken from https://css-tricks.com/examples/hrs/)****/
 hr.style-eight {
     overflow: visible; /* For IE */
     padding: 0;
@@ -371,7 +371,7 @@ ul.description{
     font-size: 1.3rem;
 }
 
-/**** CARD HOVER ****/
+/**** CARD HOVER (taken from "https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers#:~:text=Hover%20Bootstrap%20Cards&text=A%20box%2Dshadow%20is%20declared,user%20hovers%20over%20the%20card.&text=To%20recreate%20the%20hover%2C%20just,CSS%20declarations%20to%20your%20project.****/
 .card {
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);

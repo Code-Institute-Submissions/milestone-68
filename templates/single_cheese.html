@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--Main container -->
 <div class="container">
     <section class="row align-items-center my-5">
         <div class="col-lg-7">
+            <!-- Cheese information -->
             <a class="btn btn-primary-3 btn-lg" href="{{ url_for('get_cheeses') }}" role="button">Back to Cheeses</a>
             <h2 class="single-title">{{cheeses.cheese_name}}</h2>
             <hr>
@@ -21,10 +23,11 @@
         </article>
     </section>
     <h1 class="text-center">Our Wine Suggestion</h1>
-    <!-- Breakline -->
+    <!-- Breakline (taken from https://css-tricks.com/examples/hrs/)-->
     <hr class="style-eight">
     <section class="row align-items-center my-5">
         <article class="col-lg-5">
+            <!-- Wine information -->
             <ul class="description">
                 <li><i class="fas fa-flag"></i> {{cheeses.origin}}</li><br>
                 <li><i class="fas fa-globe-americas"></i> {{cheeses.regions}}</li><br>

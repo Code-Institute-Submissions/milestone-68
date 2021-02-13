@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Jumbotron -->
+<!-- Bootstrap Jumbotron -->
 <div class="jumbotron text-center">
     <div class="container">
         <h1 class="display-3">Cheese & Wine</h1>
@@ -9,10 +9,10 @@
         <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Register</a>
     </div>
 </div>
-<!-- Breakline -->
+<!-- Breakline (taken from https://css-tricks.com/examples/hrs/)-->
 <hr class="style-eight">
 <section>
-    <!-- Carousel / About section -->
+    <!-- Bootstrap Carousel / About section -->
     <div class="container">
         <section class="row align-items-center my-5">
             <div class="col-lg-7">
@@ -44,6 +44,7 @@
                     </a>
                 </div>
             </div>
+            <!-- About -->
             <article class="col-lg-5">
                 <h2 class="text-center">Welcome!</h2>
                 <p>Wine and cheese are well known bedfellows but if you’re a beginner it might seem daunting to decide
@@ -53,7 +54,7 @@
                 <a class="btn btn-primary btn-lg shadow mt-3" href="{{ url_for('get_cheeses') }}" role="button">View Pairings</a>
             </article>
         </section>
-        <!-- Card panel Popular Cheeses -->
+        <!-- EmailJS contact form -->
         <div class="card bg-secondary my-5 py-4 text-center shadow mt-3">
             <div class="card-body">
                 <h3 class="text">Want to find out more? Contact Us... <i class="fas fa-envelope-open-text social-icon"
