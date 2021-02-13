@@ -209,6 +209,7 @@ CRUD functionality is working as expected, no errors.
 | Clicking on `Instagram` icon | Opens Instagram website in new tab | As expected | Pass |
 | Clicking on `YouTube` icon | Opens YouTube website in new tab | As expected | Pass |
 | Clicking on `Twitter` icon | Opens Twitter website in new tab | As expected | Pass |
+| Clicking on `Email` icon | Opens email modal to contact site owner | As expected | Pass |
 
 ---
 
