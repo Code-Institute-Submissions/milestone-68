@@ -17,9 +17,12 @@
     <!-- Email.js service -->
     <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="/site.webmanifest">
     {% block styles %}
     {% endblock %}
@@ -75,18 +78,18 @@
             </div>
         </div>
     </div>
-        <!-- flash messages -->
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row mx-auto message_container">
-            <div class="alert alert-warning mx-auto mt-5" role="alert">
-                {{message}}
-            </div>
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row mx-auto message_container">
+        <div class="alert alert-warning mx-auto mt-5" role="alert">
+            {{message}}
         </div>
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
     <!-- Main content -->
     <main class="container">
         {% block content %}
@@ -114,10 +117,37 @@
                     <i class="fab fa-twitter social-icon hoverable"></i>
                     <span class="sr-only">Twitter</span>
                 </a>
+                <i class="fas fa-envelope-open-text social-icon" aria-hidden="true" data-toggle="modal"
+                    data-target="#contactModal"></i>
                 <!--/ Social links-->
             </div>
         </div>
     </footer>
+    <!-- Contact form modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="contactModalheading">Contact Us</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name*"
+                            required />
+                        <input type="email" name="emailaddress" class="form-control" id="emailaddress" minlength="10"
+                            pattern=".+.com" placeholder="Email adress*" required />
+                        <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary"
+                            placeholder="Write your query and click submit!*" required></textarea>
+                        <button form="contactForm" type="submit" id="submit" class="btn btn-danger-2">Submit!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap & core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
