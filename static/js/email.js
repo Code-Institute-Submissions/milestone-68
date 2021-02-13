@@ -1,10 +1,6 @@
 // --- Immediately invoked function for email.js ---
 (function(){emailjs.init("user_qI0f2g6tNqj3cj8yeKtiz");})();
 
-let emailjs;
-let contactForm;
-let $;
-
 // --- Sends e-mail to my e-mail adress
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();

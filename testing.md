@@ -19,6 +19,8 @@
     * [Edit Pairing](#edit-pairing)
     * [Footer](#footer)
 
+* [Validator Results](#validator-results)
+
 #### Back to [Readme.md](https://github.com/sophieboyle1/milestone-3)
 
 ---
@@ -208,48 +210,34 @@ CRUD functionality is working as expected, no errors.
 | Clicking on `YouTube` icon | Opens YouTube website in new tab | As expected | Pass |
 | Clicking on `Twitter` icon | Opens Twitter website in new tab | As expected | Pass |
 
+---
+
+## Validator Results
+
+### HTML Results:<br>
+This warning is due to my carousel/about section, which I have a heading in the about section right below.<br>
+![html-1](static/img/readme/html-1.png)
+
+![html-2](static/img/readme/html-2.png)
+![html-3](static/img/readme/html-3.png)
+![html-4](static/img/readme/html-4.png)
+![html-5](static/img/readme/html-5.png)
+
+---
+
+### CSS Results:
+![css](static/img/readme/css.png)
+
+---
+
+### JavaScript Results:
+![java](static/img/readme/java.png)
+
+---
+
+### Python Results:
+![python](static/img/readme/python.png)
+
+---
+
 [Back to top](#summary)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
