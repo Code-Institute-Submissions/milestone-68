@@ -108,17 +108,17 @@ Footer is visible on any page and icons themselves are clickable and lead to soc
 
 ### Wireframes
 Home: <br>
-![homepage-wireframe](static/img/readme/wireframes/homepage.png)
+![homepage-wireframe](static/img/readme/wireframes/homepage.png)<br>
 View cheeses: <br>
-![view-cheeses](static/img/readme/wireframes/view-cheese.png)
+![view-cheeses](static/img/readme/wireframes/view-cheese.png)<br>
 Pairings: <br>
-![pairings](static/img/readme/wireframes/single.png)
-Register <br>
-![register](static/img/readme/wireframes/register.png)
+![pairings](static/img/readme/wireframes/single.png)<br>
+Register: <br>
+![register](static/img/readme/wireframes/register.png)<br>
 Log In: <br>
-![login](static/img/readme/wireframes/Login.png)
+![login](static/img/readme/wireframes/Login.png)<br>
 Profile: <br>
-![profile](static/img/readme/wireframes/profile.png)
+![profile](static/img/readme/wireframes/profile.png)<br>
 
 <hr>
 
@@ -327,7 +327,7 @@ I wanted to use a fairly neutral colour scheme by sticking to black, grey and wh
 
 # Testing
 
-## Testing section is located here
+## Testing section is located [here](https://github.com/sophieboyle1/milestone-3/blob/master/testing.md)
 
 ## Validating code
 
