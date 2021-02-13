@@ -1,6 +1,6 @@
 ## Summary
 
-* [Testing User Stories](#Testing-User-Stories)
+* [Testing User Stories](#testing-user-stories)
 * [Responsiveness](#responsiveness)
 * [CRUD](#crud)
     * [Create](#create-pairing)
@@ -49,7 +49,7 @@
 * As a guest user, I want to be able to search through the cheeses to check if they have one I am interested in.
   * There is a search function in the "View Cheeses" page, where the user can search for a cheese by its Country of origin.
 
-### Guest User
+### Registered User
 
 * As a registered user, I want to be able to log in with my username and password.
   * All login funconalitys are working with no erros, the data base saves the user's information for everytime he/she wishes to log in.
